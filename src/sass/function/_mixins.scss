@@ -1,0 +1,9 @@
+// ---
+// メディアクエリー
+// ---
+
+@mixin mq($breakpoint: tab) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

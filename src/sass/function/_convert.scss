@@ -1,0 +1,7 @@
+@function rem($pixels) {
+  @return $pixels / 16 * 1rem;
+}
+
+@function vw($window_width, $size) {
+	@return $size / $window_width * 100vw;
+}
