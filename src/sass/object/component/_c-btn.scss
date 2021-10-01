@@ -1,6 +1,36 @@
-// めろさん
+// 共通CSS
 .c-btn {
-    padding: rem(10) rem(40);
-    background-color: blue;
-    color: white;
+  display: inline-block;
+  width: 100%;
+  font-size: rem(20);
+  // font-weight: $regular;
+  letter-spacing: rem(2);
+  padding: rem(9) 0;
+  @include mq() {
+    font-size: rem(16);
+    padding: rem(16) 0;
+  }
+}
+
+//メインに使われている背景黒、文字白の設定
+.c-btn--black {
+  @extend .c-btn;
+  background-color: $gray;
+  color: $white;
+  border: rem(1) solid $white;
+  @include mq() {
+    //ホバーエフェクト
+    @include btn__hover--LtoR($white, $gray);
+  }
+}
+
+//お問い合わせページで使われている背景白、文字黒の設定
+.c-btn--white {
+  @extend .c-btn;
+  background-color: $white;
+  color: $gray;
+  @include mq() {
+    //ホバーエフェクト
+    @include btn__hover--LtoR($gray, $white);
+  }
 }

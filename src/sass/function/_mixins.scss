@@ -7,3 +7,31 @@
 		@content;
 	}
 }
+
+//---
+//ボタンのホバーエフェクト
+//左から右へスワイプ、ホバーアウト時右へ抜けるエフェクト
+//---
+
+@mixin btn__hover--LtoR($backgroundColor, $fontColor) {
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: $fontColor;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $backgroundColor;
+    transition: all .3s;
+  }
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
+}
