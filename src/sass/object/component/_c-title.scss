@@ -1,1 +1,34 @@
-// さらさ
+.c-title {
+    text-align: center;
+    position: relative;
+}
+
+.c-title__ja {
+    font-size: rem(20);
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding-top: 1em;
+    @include mq('tab') {
+        font-size: rem(30);
+        line-height: (35 / 30);
+    }
+}
+
+.c-title__en {
+    font-size: rem(50);
+    letter-spacing: 2px;
+    line-height: 1;
+    color: #F9F871;
+    opacity: 0.27;
+    font-family: $font-family-second;
+    text-transform: capitalize;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq('tab') {
+        font-size: rem(110);
+        left: 0;
+        transform: none;
+    }
+}
