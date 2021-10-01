@@ -1,1 +1,21 @@
-// さらさ
+.c-to-top {
+    position: fixed;
+    right: rem(21);
+    bottom: rem(41);
+    width: rem(45);
+    height: rem(45);
+    background-color: $text-color;
+    background-image: url(../images/common/to-top.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: rem(24);
+    transition: background-color .3s, background-image .3s;
+    &:hover {
+        background-image: url(../images/common/to-top-white.svg);
+        background-color: #333;
+    }
+    @include mq('tab') {
+        right: rem(32);
+        bottom: rem(27);
+    }
+}

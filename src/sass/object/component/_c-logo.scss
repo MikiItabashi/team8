@@ -1,1 +1,10 @@
-// さらさ
+.c-logo {
+    width: rem(70);
+    @include mq('tab') {
+        width: rem(101);
+    }
+}
+
+.c-logo--small {
+    width: rem(70);
+}
