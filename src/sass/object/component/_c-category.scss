@@ -1,2 +1,8 @@
 // トップページの「お知らせ」のみ。カード内や制作実績内のカテゴリーは別で作る。
-// ゆうきさん
+.c-category {
+    padding: rem(6.5) rem(22.5) rem(4);
+    display: inline-block;
+    font-size: rem(16);
+    color: $white;
+    border: rem(1) solid $white;
+}
