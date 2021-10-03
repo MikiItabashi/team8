@@ -1,1 +1,40 @@
-// ゆうきさん
+.c-drawer-icon{
+    z-index:999;
+}
+   
+.c-drawer-icon span {
+    position: relative;
+    display: block;
+    width: rem(24);
+    height: rem(2);
+    background: $white;
+    transition: ease .3s;
+}
+   
+.c-drawer-icon span:nth-child(1) {
+    top: 0;
+}
+   
+.c-drawer-icon span:nth-child(2) {
+    margin: rem(6.5) 0;
+}
+   
+.c-drawer-icon span:nth-child(3) {
+    top: 0;
+}
+
+/*is-OPEN時の動き*/
+.c-drawer-icon.is-open span:nth-child(1) {
+    top: rem(5);
+    transform: rotate(45deg);
+}
+   
+.c-drawer-icon.is-open span:nth-child(2) {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+   
+.c-drawer-icon.is-open span:nth-child(3) {
+    top: rem(-7);
+    transform: rotate(-45deg);
+}
