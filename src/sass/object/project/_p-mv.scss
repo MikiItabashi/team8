@@ -1,0 +1,81 @@
+.p-mv {}
+
+.p-mv__container {
+  overflow: hidden;
+}
+
+.p-mv__wrapper {}
+
+.p-mv__slide {}
+
+.p-mv__img {
+  height: 100vh;
+  z-index: -1;
+}
+
+//画像に20％の黒を重ねる
+.p-mv__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color:#000000, $alpha: 0.2);
+}
+
+.p-mv__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active .p-mv__img,
+.swiper-slide-duplicate-active .p-mv__img,
+.swiper-slide-prev .p-mv__img {
+  animation: zoomUp 10s linear 0s 1 normal both;  
+}
+
+.p-mv__titleblock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.p-mv__title {
+  font-size: rem(28);
+  font-weight: bold;
+  letter-spacing: rem(0.5);
+  @include mq() {
+    font-size: rem(50);
+    letter-spacing: rem(0.5);
+    line-height: 1;
+  }
+}
+
+.p-mv__subtitle {
+  display: block;
+  margin-top: rem(13);
+  font-size: rem(20);
+  font-weight: bold;
+  letter-spacing: rem(0.5);
+  @include mq() {
+    margin-top: rem(24);
+    font-size: rem(25);
+    line-height: 1;
+  }
+}
