@@ -1,1 +1,13 @@
-// めろさん
+.c-breadcrumb {}
+
+.c-breadcrumb__items {
+  display: flex;
+}
+
+.c-breadcrumb__item {
+  display: flex;
+  font-size: rem(16);
+  letter-spacing: rem(1);
+}
+
+.c-breadcrumb__link {}
