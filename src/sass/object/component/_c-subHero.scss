@@ -1,0 +1,33 @@
+// 下層ページ メインビジュアル共通部
+.c-subHero {
+    height: rem(425);
+    position: relative;
+    background-image: url(./../images/news/news-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include mq('tab') {
+        height: rem(370);
+    }
+}
+
+.c-subHero::before {
+    background-color: rgba(17, 17, 17, 0.2);
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.c-subHero h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(35);
+    font-weight: bold;
+    color: $white;
+    letter-spacing: 0.05em;
+}
