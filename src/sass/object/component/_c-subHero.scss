@@ -8,7 +8,7 @@
     background-position: center;
     @include mq('tab') {
         height: rem(370);
-      }
+    }
 }
 
 .c-subHero::before {
