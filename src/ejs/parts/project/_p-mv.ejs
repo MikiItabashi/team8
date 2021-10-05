@@ -1,0 +1,19 @@
+<section class="p-mv">
+  <div class="swiper-container p-mv__container js-mv-swiper">
+    <div class="swiper-wrapper p-mv__wrapper">
+      <!-- メイン画像のタイトルをmv1、mv2、mv3とすることでループ処理 -->
+      <% for (var i=1; i < 4; i++) { %>
+        <div class="swiper-slide p-mv__slide">
+          <div class="slide-img p-mv__img l-mv__img">
+            <img src="./images/top/mv<%= i %>@2x.jpg" alt="メインビジュアル画像<%= i %>枚目">
+          </div>
+        </div>
+        <% } %>
+
+    </div>
+    <div class="p-mv__titleblock">
+      <h1 class="p-mv__title">メインタイトルが入ります</h1>
+      <span class="p-mv__subtitle">サブタイトルが入ります</span>
+    </div>
+  </div>
+</section>
