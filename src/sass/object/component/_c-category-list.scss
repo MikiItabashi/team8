@@ -1,1 +1,18 @@
-// めろさん
+.c-category-list {}
+
+.c-category-list__items {
+  display: flex;
+}
+
+.c-category-list__link {
+  padding: 0 rem(12);
+  @include mq() {
+    padding: 0 rem(20);
+  }
+}
+
+.c-category-list__item:nth-of-type(1) {
+  .c-category-list__link {
+    padding-left: 0;
+  }
+}
