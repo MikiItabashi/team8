@@ -1,0 +1,25 @@
+<!-- includeする際、『pagetitle』と『posttitle』パラメータの設定をしてください。 -->
+<!-- （詳細ページ以外は『posttitle』は空欄で設定） -->
+<%# 例）include('./parts/component/_c-breadcrumb',{pagetitle:'制作実績', posttitle:''}) %>
+
+<div class="l-breadcrumb c-breadcrumb">
+  <ul class="c-breadcrumb__items l-inner">
+
+    <li class="c-breadcrumb__item">
+      <a href="#" class="c-breadcrumb__link">トップ</a>
+    </li>
+
+    <li class="c-breadcrumb__item">
+      <p>&nbsp;&gt;&nbsp;</p>
+      <a href="#" class="c-breadcrumb__link"><%= pagetitle %></a>
+    </li>
+    
+    <% if( ! posttitle == "" ) { %>
+    <li class="c-breadcrumb__item">
+      <p>&nbsp;&gt;&nbsp;</p>
+      <a href="#" class="c-breadcrumb__link"><%= posttitle %></a>
+    </li>
+    <% } %>
+
+  </ul>
+</div>
