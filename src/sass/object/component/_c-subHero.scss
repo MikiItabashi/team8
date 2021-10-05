@@ -1,11 +1,14 @@
 // 下層ページ メインビジュアル共通部
 .c-subHero {
-    height: rem(370);
+    height: rem(425);
     position: relative;
     background-image: url(./../images/news/news-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include mq('tab') {
+        height: rem(370);
+      }
 }
 
 .c-subHero::before {
