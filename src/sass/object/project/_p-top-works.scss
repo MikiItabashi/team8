@@ -1,0 +1,123 @@
+.p-top-works {}
+
+.p-top-works__head {}
+
+.p-top-works__wrapper {
+    margin-top: rem(48);
+    position: relative;
+    @include mq('tab') {
+        margin-top: rem(42);
+    }
+}
+
+.p-top-works__body {
+    @include mq('tab') {
+        margin-top: rem(42);
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.p-top-works__wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $gray;
+    z-index: -1;
+    @include mq('tab') {
+        width: 70%;
+    }
+}
+
+.p-top-works__slider {
+    margin: 0 calc(50% - 50vw);
+    @include mq('tab') {
+        margin: 0;
+        width: 50%;
+    }
+}
+
+.p-top-works__content {
+    padding-top: rem(24);
+    padding-bottom: rem(21);
+    @include mq('tab') {
+        margin-left: rem(32);
+        width: calc(50% + #{rem(32)});
+        width: 50%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.p-top-works__title {
+    font-size: rem(20);
+    letter-spacing: 2px;
+    text-align: center;
+    @include mq('tab') {
+        font-size: rem(25);
+        letter-spacing: 0.5px;
+        text-align: left;
+    }
+}
+
+.p-top-works__text {
+    letter-spacing: 2px;
+    margin-top: rem(24);
+    @include mq('tab') {
+        letter-spacing: 0.5px;
+        line-height: (35 / 16);
+        margin-top: rem(48);
+    }
+}
+
+.p-top-works__btn {
+    margin-top: rem(16);
+    text-align: center;
+    @include mq('tab') {
+        margin-top: rem(48);
+        max-width: rem(360);
+    }
+}
+
+.p-top-works__slider .swiper-custom-parent {
+    position: relative;
+}
+
+.p-top-works__slider .swiper-horizontal>.swiper-pagination-bullets,
+.p-top-works__slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+.p-top-works__slider .swiper-pagination-custom,
+.p-top-works__slider .swiper-pagination-fraction {
+    bottom: rem(-30);
+}
+
+.p-top-works__slider .swiper-pagination-bullet {
+    background: $pagination-backcolor;
+    opacity: 1;
+}
+
+.p-top-works__slider .swiper-pagination-bullet-active {
+    background: $pagination-color;
+}
+
+.p-top-works__slider .swiper-slide {
+    position: relative;
+}
+
+.p-top-works__slider .swiper-slide::before {
+    content: "";
+    position: absolute;
+    background: $background;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    ;
+}
