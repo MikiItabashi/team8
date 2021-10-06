@@ -3,6 +3,7 @@
 .p-top-works__head {}
 
 .p-top-works__wrapper {
+    z-index: 1;
     margin-top: rem(48);
     position: relative;
     @include mq('tab') {
