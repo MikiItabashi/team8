@@ -1,0 +1,43 @@
+<section class="p-top-works">
+    <div class="l-inner">
+        <div class="p-top-works__head">
+            <%- include('../component/_c-title',{japaneseTitle:'制作実績', englishTitle:'Works'}) %>
+        </div>
+    </div>
+    <div class="p-top-works__wrapper">
+        <div class="l-inner">
+            <div class="p-top-works__body">
+                <div class="p-top-works__slider">
+                    <!-- Slider main container -->
+                    <div class="swiper-custom-parent">
+                        <div class="swiper js-top-works-swiper">
+                            <!-- Additional custom wrapper -->
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img class="swiper-slide-img" src="images/works/works-img1.jpg" alt="制作実績イメージ画像1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-slide-img" src="images/works/works-img2.jpg" alt="制作実績イメージ画像2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-slide-img" src="images/works/works-img3.jpg" alt="制作実績イメージ画像3">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="p-top-works__content">
+                    <p class="p-top-works__title">メインタイトルが入ります</p>
+                    <p class="p-top-works__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <div class="p-top-works__btn">
+                        <%- include('../component/_c-btn',{text:'詳しく見る', link:'#', backcolor:'black'}) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

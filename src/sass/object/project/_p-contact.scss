@@ -1,0 +1,36 @@
+.p-contact {
+    padding-top: rem(19);
+    padding-bottom: rem(64);
+    background: $gray;
+    @include mq('tab') {
+        padding-top: rem(148);
+        padding-bottom: rem(149);
+    }
+}
+
+.p-contact__head .c-title__en {
+    bottom: 0;
+    top: auto;
+}
+
+.p-contact__body {
+    margin-top: rem(25);
+    @include mq('tab') {
+        text-align: center;
+    }
+}
+
+.p-contact__text {
+    letter-spacing: 2px;
+}
+
+.p-contact__btn {
+    margin-top: rem(40);
+    text-align: center;
+    @include mq('tab') {
+        margin-top: rem(61);
+        max-width: rem(360);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
