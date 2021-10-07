@@ -1,0 +1,52 @@
+.p-footer-nav__items {
+    margin-top: rem(3);
+    @include mq('tab') {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.p-footer-nav__item {
+    margin-top: rem(1);
+    @include mq('tab') {
+        margin-top: 0;
+        margin-left: rem(32);
+    }
+}
+
+.p-footer-nav__item:first-of-type {
+    margin-top: 0;
+    @include mq('tab') {
+        margin-left: 0;
+    }
+}
+
+.p-footer-nav__item a {
+    position: relative;
+    display: block;
+    font-size: rem(16);
+    letter-spacing: 0.08em;
+    transition: ease 0.3s;
+}
+
+.p-footer-nav__text {
+    position: relative;
+}
+
+.p-footer-nav__item a:hover .p-footer-nav__text:after {
+    width: 100%;
+}
+
+.p-footer-nav__text:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: rem(25);
+    left: 0;
+    background-color: $navhover-color;
+    transition: ease 0.3s;
+    @include mq('tab') {
+        top: rem(30);
+    }
+}
