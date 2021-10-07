@@ -1,12 +1,21 @@
 .c-drawer-icon{
+    height: inherit;
+    position: relative;
     z-index:999;
+    @include mq('tab') {
+        display: none;
+    }
 }
-   
+
+.c-drawer-icon:hover {
+    cursor: pointer;
+}
+
 .c-drawer-icon span {
     position: relative;
     display: block;
-    width: rem(24);
-    height: rem(2);
+    width: 24px;
+    height: 2px;
     background: $white;
     transition: ease .3s;
 }
@@ -16,7 +25,7 @@
 }
    
 .c-drawer-icon span:nth-child(2) {
-    margin: rem(6.5) 0;
+    margin: 4px 0;
 }
    
 .c-drawer-icon span:nth-child(3) {
@@ -25,7 +34,7 @@
 
 /*is-OPEN時の動き*/
 .c-drawer-icon.is-open span:nth-child(1) {
-    top: rem(5);
+    top: 5px;
     transform: rotate(45deg);
 }
    
@@ -35,6 +44,6 @@
 }
    
 .c-drawer-icon.is-open span:nth-child(3) {
-    top: rem(-7);
+    top: -7px;
     transform: rotate(-45deg);
 }

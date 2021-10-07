@@ -1,0 +1,13 @@
+.l-sp-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 100;
+}
+
+.l-sp-nav::-webkit-scrollbar {
+    display: none;
+}

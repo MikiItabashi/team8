@@ -1,0 +1,47 @@
+.p-sp-nav {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    text-align: center;
+}
+
+.p-sp-nav__items {
+    padding: rem(205) 0;
+}
+
+.p-sp-nav__item {
+    margin-top: rem(25);
+    width: 100%;
+    text-align: center;
+}
+
+.p-sp-nav__item:first-of-type {
+    margin-top: 0;
+}
+
+.p-sp-nav__item a {
+    display: block;
+    font-size: rem(16);
+    letter-spacing: 0.1em;
+    transition: ease 0.3s;
+}
+  
+.p-sp-nav__text {
+    position: relative;
+}
+
+.p-sp-nav__item a:hover .p-sp-nav__text:after {
+    width: 100%;
+}
+
+.p-sp-nav__text:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: rem(35);
+    left: 0;
+    background-color: $navhover-color;
+    transition: ease 0.3s;
+}

@@ -288,3 +288,16 @@ summary {
     scroll-behavior: auto !important;
   }
 }
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}

@@ -1,0 +1,50 @@
+.p-header {
+    width: 100%;
+    height: 50px;
+    background: rgba($color: #111, $alpha: .5);
+    border: 1px solid $black;
+    transition: ease 0.3s;
+    @include mq('tab') {
+        border: none;
+    }
+}
+
+.p-header__inner {
+    padding: 0 rem(22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    @include mq('tab') {
+        padding: 0 0 0 rem(32);
+    }
+}
+
+.p-header__logo {
+    width: rem(70);
+    position: relative;
+    z-index: 999;
+    transition: ease 0.3s;
+    @include mq('tab') {
+        width: rem(100);
+    }
+}
+
+.p-header__logo:hover {
+    opacity: .5;
+}
+
+.p-header__logo img {
+    display: block;
+}
+
+.p-header__right {
+    height: inherit;
+}
+
+.p-header__pc-nav {
+    display: none;
+    @include mq('tab') {
+        display: block;
+	}
+}
