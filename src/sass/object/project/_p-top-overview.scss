@@ -49,7 +49,7 @@
     padding-top: rem(24);
     padding-bottom: rem(21);
     @include mq('tab') {
-        margin-left: rem(32);
+        margin-right: rem(32);
         width: calc(50% + #{rem(32)});
         width: 50%;
         padding-top: 0;
