@@ -23,9 +23,14 @@
 .p-footer__logo {
     margin: 0 auto;
     width: rem(70);
+    transition: ease 0.3s;
     @include mq('tab') {
         margin: 0;
     }
+}
+
+.p-footer__logo:hover {
+    opacity: .5;
 }
 
 .p-footer__logo img {
