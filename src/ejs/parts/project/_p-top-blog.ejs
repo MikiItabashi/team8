@@ -1,0 +1,21 @@
+<section class="p-top-blog">
+    <div class="l-inner">
+        <div class="p-top-blog__head">
+            <%- include('../component/_c-title',{japaneseTitle:'ブログ', englishTitle:'Blog'}) %>
+        </div>
+        <div class="p-top-blog__body">
+            <div class="p-top-blog__card">
+                <%- include('./_p-blog-card') %>
+            </div>
+            <div class="p-top-blog__card">
+                <%- include('./_p-blog-card') %>
+            </div>
+            <div class="p-top-blog__card">
+                <%- include('./_p-blog-card') %>
+            </div>
+        </div>
+        <div class="p-top-blog__btn">
+            <%- include('../component/_c-btn',{text:'詳しく見る', link:'#', backcolor:'black'}) %>
+        </div>
+    </div>
+</section>
