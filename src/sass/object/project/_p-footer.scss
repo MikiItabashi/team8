@@ -1,0 +1,48 @@
+.p-footer {
+    padding: rem(50) 0 rem(55);
+    text-align: center;
+    @include mq('tab') {
+        padding: rem(35) 0 rem(25);
+    }
+}
+
+.p-footer__inner {
+    @include mq('tab') {
+        padding: 0 rem(32);
+    }
+}
+
+.p-footer__container {
+    @include mq('tab') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.p-footer__logo {
+    margin: 0 auto;
+    width: rem(70);
+    transition: ease 0.3s;
+    @include mq('tab') {
+        margin: 0;
+    }
+}
+
+.p-footer__logo:hover {
+    opacity: .5;
+}
+
+.p-footer__logo img {
+    display: block;
+}
+
+.p-footer__copyright {
+    margin-top: rem(24);
+    font-size: rem(14);
+    letter-spacing: 0.06em;
+    @include mq('tab') {
+        margin-top: rem(75);
+        font-size: rem(18);
+    }
+}
