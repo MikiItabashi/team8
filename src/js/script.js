@@ -25,10 +25,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // ヘッダー
   $(window).on('scroll', function () {
-    if ($('.slider1').height() < $(this).scrollTop()) {
-      $('.header').css('background', 'rgba(17,17,17,1)');
+    if (($('.p-mv').height() || $('.c-subHero').height()) < $(this).scrollTop()) {
+      $('.p-header').css('background', 'rgba(17,17,17,1)');
     } else {
-      $('.header').css('background', 'rgba(17,17,17,0.5)');
+      $('.p-header').css('background', 'rgba(17,17,17,0.5)');
     }
   });
 
@@ -49,6 +49,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  //ナビバートグル
+  $('.js-hamburger').on('click', function () {
+    if ($('.js-hamburger').hasClass('is-open')) {
+      $('.js-drawer-nav').fadeOut();
+      $(this).removeClass('is-open');
+    } else {
+      $('.js-drawer-nav').fadeIn();
+      $(this).addClass('is-open');
+    }
+
+    if (window.matchMedia( "(min-width: 768px)" ).matches) {
+      $('.js-drawer-nav').fadeOut();
+    }
+  });
 
 
 });
