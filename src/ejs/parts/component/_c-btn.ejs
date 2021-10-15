@@ -4,4 +4,7 @@
 <%# whiteの場合は背景が白、文字色が黒 %>
 <% } else if(backcolor == 'white') { %>
   <a href="<%= link %>" class="c-btn--white"><%= text %></a>
+<%# halfの場合はSP版は背景が黒、PC版は背景が白 %>
+<% } else if(backcolor == 'half') { %>
+  <a href="<%= link %>" class="c-btn--half"><%= text %></a>
 <% } %>
