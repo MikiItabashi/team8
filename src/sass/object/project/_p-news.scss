@@ -1,0 +1,38 @@
+.p-news {}
+
+.p-news__wrapper {
+  @include mq() {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-news__header {
+  display: flex;
+  align-items: center;
+  margin-right: rem(60);
+}
+
+.p-news__date {
+  margin-right: rem(48);
+  font-size: rem(16);
+}
+
+.p-news__category {
+  font-size: rem(14);
+  padding: rem(6) rem(22);
+  border: rem(1) solid $white;
+}
+
+.p-news__titleblock {
+  flex: 1;
+  margin-top: rem(16);
+  @include mq() {
+    margin-top: initial;
+  }
+}
+
+.p-news__title {
+  font-size: rem(16);
+  
+}
