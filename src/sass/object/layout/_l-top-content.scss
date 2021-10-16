@@ -1,0 +1,13 @@
+.l-top-content {
+  margin-top: rem(100);
+  @include mq(){
+    margin-top: rem(150);
+  }
+}
+
+.l-top-content__wrapper {
+  margin-top: rem(48);
+  @include mq() {
+    margin-top: rem(40);
+  }
+}
