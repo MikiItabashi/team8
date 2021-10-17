@@ -10,7 +10,9 @@
 }
 
 .p-top-news__content {
-  margin-right: rem(48);
+  @include mq() {
+    margin-right: rem(48);
+  }
 }
 
 .p-top-news__btnblock {
