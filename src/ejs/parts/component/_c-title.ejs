@@ -2,7 +2,13 @@
     <h2 class="c-title__ja">
         <%= japaneseTitle %>
     </h2>
+    <% if((englishTitle == 'Works') || (englishTitle == 'Blog') ){%>
+    <p class="c-title__en c-title__en--right">
+        <%= englishTitle %>
+    </p>
+    <% }else{ %>
     <p class="c-title__en">
         <%= englishTitle %>
     </p>
+    <% } %>
 </div>
