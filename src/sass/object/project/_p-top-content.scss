@@ -1,4 +1,24 @@
-.p-top-content {}
+.p-top-content {
+  position: relative;
+}
+
+.p-top-content::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 45%;
+  width: 1px;
+  height: calc(776 / 375 * 100vw);
+  background-color: #F9F871;
+  transform: rotate(-29deg);
+  z-index: -1;
+  @include mq() {
+    top: -87%;
+    left: 49.5%;
+    height: calc(1714 / 1280 * 107vw);
+    transform: rotate(-45deg);
+  }
+}
 
 .p-top-content__wrapper {}
 
