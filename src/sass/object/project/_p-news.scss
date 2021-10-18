@@ -10,7 +10,9 @@
 .p-news__header {
   display: flex;
   align-items: center;
-  margin-right: rem(60);
+  @include mq() {
+    margin-right: rem(60);
+  }
 }
 
 .p-news__date {
