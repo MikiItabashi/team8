@@ -32,3 +32,10 @@
         transform: none;
     }
 }
+
+.c-title__en.c-title__en--right {
+    @include mq('tab') {
+        right: 0;
+        left: initial;
+    }
+}
