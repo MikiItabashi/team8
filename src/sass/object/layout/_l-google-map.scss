@@ -1,0 +1,6 @@
+.l-google-map {
+  margin-top: rem(120);
+  @include mq() {
+    margin-top: rem(80);
+  }
+}
