@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./common/_head') %>
+  <body>
+    <%- include('./common/_p-header') %>
+    <%- include('./parts/component/_c-subHero',{subHeroTitle:'制作実績'}) %>
+
+    <div class="l-breadcrumb">
+      <%- include('./parts/component/_c-breadcrumb',{pagetitle:'制作実績', posttitle:''}) %>
+    </div>
+
+    <section class="l-category-list">
+      <%- include('./parts/component/_c-category-list') %>
+    </section>
+
+    <section class="l-works">
+      <%- include('./parts/project/_p-works') %>
+    </section>
+
+    <section class="l-pagination">
+      <%- include('./parts/component/_c-pagination') %>
+    </section>
+
+    <section class="l-contact">
+      <%- include('./parts/project/_p-contact') %>
+    </section>
+
+    <%- include('./common/_p-footer') %>
+
+  </body>
+</html>
