@@ -1,0 +1,38 @@
+    <%
+    const worksLists=[
+      { src:"images/works/works-img1.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+      { src:"images/works/works-img2.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+      { src:"images/works/works-img3.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+      { src:"images/works/works-img1.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+      { src:"images/works/works-img2.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+      { src:"images/works/works-img3.jpg" , alt:"制作実績",
+        title:"CodeUps株式会社", link:"works-detail.html" },
+    ] %>
+
+<section class="p-works">
+  <div class="p-works__inner l-inner">
+    <div class="p-works__wrapper">
+      <ul class="p-works__list">
+        <% for (var worksList of worksLists) {%>
+        <li class="p-works__item">
+          <a href="" class="p-works__link">
+            <div class="p-works__img">
+              <img src="<%= worksList.src %>" alt="<%= worksList.alt %>">
+              <a class="p-works__category" href="#">
+                <span>カテゴリ１</span>
+              </a>
+            </div>
+            <div class="p-works__title"><%= worksList.title %></div>
+          </a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+
+  </div>
+</section>

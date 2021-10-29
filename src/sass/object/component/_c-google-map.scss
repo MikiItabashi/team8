@@ -1,0 +1,28 @@
+.c-google-map__inner {
+  width: 100%;
+  @include mq() {
+    margin: 0 auto;
+    max-width: $l-inner + strip-unit($padding-pc) * 2;
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
+.c-google-map__wrapper {
+  position: relative;
+  // overflow: hidden;
+  width: 100%;
+  height: 299px;//情報画面が299pxから縮小表示されるためあえて299px指定。(見辛さ回避）
+	@include mq() {
+    height: 0;
+    padding-top: 33.3%;
+  }
+}
+
+.c-google-map__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

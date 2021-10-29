@@ -1,0 +1,24 @@
+    <%
+    const overviewLists=[
+      { title:"会社名",   text:"株式会社CodeUps" },
+      { title:"設立",     text:"テキストが入ります。" },
+      { title:"資本金",   text:"テキストが入ります。" },
+      { title:"売上高",   text:"テキストが入ります。" },
+      { title:"代表者",   text:"テキストが入ります。" },
+      { title:"従業員数", text:"テキストが入ります。" },
+      { title:"事業内容", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" },
+      { title:"所在地",   text:"東京都" },
+    ] %>
+
+<div class="p-overview">
+  <div class="p-overview__inner l-inner">
+
+    <% for (var overviewList of overviewLists) {%>
+      <dl class="p-overview__list">
+        <dt class="p-overview__title"><%= overviewList.title %></dt>
+        <dd class="p-overview__text"><%= overviewList.text %></dd>
+      </dl>
+    <% } %>
+
+  </div>
+</div>

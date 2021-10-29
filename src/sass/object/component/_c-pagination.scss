@@ -1,0 +1,43 @@
+.c-pagination {}
+
+.c-pagination__inner {
+}
+
+.c-pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-pagination__list > li:nth-of-type(n+2) {
+  margin-left: rem(24);
+}
+
+.c-pagination__numberlist {
+  display: flex;
+}
+ 
+.c-pagination__numberlist > li:nth-of-type(n+2) {
+  margin-left: rem(16);
+}
+
+.c-pagination__item {
+  border: 1px solid $text-color;
+  color: $text-color;
+  font-size: rem(16);
+}
+
+
+.c-pagination__item.current {
+  background-color: $text-color;
+  color: $background;
+}
+
+.c-pagination__item--prev-next {
+  
+  padding: rem(3) rem(13);
+}
+
+.c-pagination__item--number {
+  padding: rem(3) rem(8);
+}
