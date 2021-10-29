@@ -1,0 +1,15 @@
+.l-page-news {
+    max-width: rem(860);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: rem(85);
+    margin-bottom: rem(120);
+    @include mq('tab') {
+        margin-top: rem(69);
+        margin-bottom: rem(150);
+    }
+}
+
+.l-page-news__pagination {
+    margin-top: rem(104);
+}
