@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./common/_head') %>
+
+    <body>
+        <%- include('./common/_p-header') %>
+        <%- include('./parts/component/_c-subHero',{subHeroTitle:'お知らせ'}) %>
+
+        <div class="l-breadcrumb">
+            <%- include('./parts/component/_c-breadcrumb',{pagetitle:'お知らせ一覧', posttitle:''}) %>
+        </div>
+
+        <section class="l-inner">
+            <div class="l-news-list">
+                <%- include('./parts/project/_p-news-list') %>
+                
+                <div class="l-pagination">
+                    <%- include('./parts/component/_c-pagination') %>
+                </div>
+            </div>
+        </section>
+  
+        <section class="l-contact">
+            <%- include('./parts/project/_p-contact') %>
+        </section>
+
+        <%- include('./common/_p-footer') %>
+    </body>
+</html>
