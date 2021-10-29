@@ -4,12 +4,24 @@
   <body>
     <%- include('./common/_p-header') %>
     <%- include('./parts/project/_p-mv') %>
-    <%- include('./parts/project/_p-top-news') %>
-    <%- include('./parts/project/_p-top-content') %>
-    <%- include('./parts/project/_p-top-works') %>
-    <%- include('./parts/project/_p-top-overview') %>
-    <%- include('./parts/project/_p-top-blog') %>
-    <%- include('./parts/project/_p-contact') %>
+    <section class="l-top-news">
+      <%- include('./parts/project/_p-top-news') %>
+    </section>
+    <section class="l-top-content">
+      <%- include('./parts/project/_p-top-content') %>      
+    </section>
+    <section class="l-top-works">
+      <%- include('./parts/project/_p-top-works') %>
+    </section>
+    <section class="l-top-overview">
+      <%- include('./parts/project/_p-top-overview') %>
+    </section>
+    <section class="l-top-blog">
+      <%- include('./parts/project/_p-top-blog') %>
+    </section>
+    <section class="l-contact">
+      <%- include('./parts/project/_p-contact') %>
+    </section>
     <%- include('./common/_p-footer') %>
   </body>
 </html>
