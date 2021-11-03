@@ -5,7 +5,7 @@
 
 .c-title__ja {
     font-size: rem(20);
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     font-weight: 400;
     padding-top: 1em;
     @include mq('tab') {
@@ -16,7 +16,7 @@
 
 .c-title__en {
     font-size: rem(50);
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     line-height: 1;
     color: #F9F871;
     opacity: 0.27;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./common/_head') %>
+
+    <body>
+        <%- include('./common/_p-header') %>
+        <%- include('./parts/component/_c-subHero',{subHeroTitle:'お問い合わせ'}) %>
+
+            <div class="l-breadcrumb">
+                <%- include('./parts/component/_c-breadcrumb',{pagetitle:'お問い合わせ', posttitle:''}) %>
+            </div>
+
+            <section class="l-inner">
+                <div class="l-contact-form">
+                    <%- include('./parts/project/_p-form') %>
+                </div>
+            </section>
+
+            <%- include('./common/_p-footer') %>
+    </body>
+
+</html>
