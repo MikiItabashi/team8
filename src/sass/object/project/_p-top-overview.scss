@@ -79,7 +79,7 @@
 
 .p-top-overview__title {
     font-size: rem(20);
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     text-align: center;
     @include mq('tab') {
         font-size: rem(25);
@@ -89,7 +89,7 @@
 }
 
 .p-top-overview__text {
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     margin-top: rem(24);
     @include mq('tab') {
         letter-spacing: 0.5px;

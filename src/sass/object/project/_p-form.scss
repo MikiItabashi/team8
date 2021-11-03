@@ -1,0 +1,71 @@
+.p-form input[type="text"],
+.p-form input[type="email"],
+.p-form textarea {
+    font-size: rem(14);
+    box-shadow: none;
+    border: none;
+    background: $white;
+    padding: rem(9);
+    appearance: none;
+    color: $black;
+    font-family: inherit;
+    width: 100%;
+    margin-top: rem(4);
+    @include mq('tab') {
+        padding: rem(7) rem(16);
+    }
+}
+
+.p-form textarea {
+    height: rem(250);
+    resize: vertical;
+    @include mq('tab') {
+        height: rem(300);
+    }
+}
+
+.p-form__items {}
+
+.p-form__item {
+    @include mq('tab') {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.p-form__item:not(:last-child) {
+    margin-bottom: rem(32);
+    @include mq('tab') {
+        margin-bottom: rem(45);
+    }
+}
+
+.p-form__label {
+    font-size: rem(14);
+    letter-spacing: 0.05em;
+    @include mq('tab') {
+        width: rem(157);
+        padding-right: rem(24);
+        text-align: right;
+        margin-top: rem(9);
+    }
+}
+
+.p-form__input {
+    margin-top: rem(16);
+    @include mq('tab') {
+        margin-top: 0;
+        width: calc(100% - #{rem(157)});
+    }
+}
+
+.p-form__btn {
+    text-align: center;
+    margin-top: rem(48);
+    @include mq('tab') {
+        margin-top: rem(56);
+        max-width: rem(360);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

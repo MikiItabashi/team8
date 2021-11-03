@@ -1,0 +1,37 @@
+<form action="#" class="p-form">
+    <dl class="p-form__items">
+        <div class="p-form__item">
+            <dt class="p-form__label">※会社名・団体名</dt>
+            <dd class="p-form__input">
+                <input type="text" placeholder="テキストがはいります" required>
+            </dd>
+        </div>
+        <div class="p-form__item">
+            <dt class="p-form__label">※お名前</dt>
+            <dd class="p-form__input">
+                <input type="text" placeholder="テキストがはいります" required>
+            </dd>
+        </div>
+        <div class="p-form__item">
+            <dt class="p-form__label">※ふりがな</dt>
+            <dd class="p-form__input">
+                <input type="text" placeholder="テキストがはいります" required>
+            </dd>
+        </div>
+        <div class="p-form__item">
+            <dt class="p-form__label">※メールアドレス</dt>
+            <dd class="p-form__input">
+                <input type="email" placeholder="テキストがはいります" required>
+            </dd>
+        </div>
+        <div class="p-form__item">
+            <dt class="p-form__label">※お問い合わせ内容</dt>
+            <dd class="p-form__input">
+                <textarea name="" placeholder="テキストがはいります" required></textarea>
+            </dd>
+        </div>
+    </dl>
+    <div class="p-form__btn">
+        <%- include('../component/_c-btn',{text:'送信', link:'#', backcolor:'white'}) %>
+    </div>
+</form>
