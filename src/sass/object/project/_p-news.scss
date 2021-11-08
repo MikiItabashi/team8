@@ -36,5 +36,13 @@
 
 .p-news__title {
   font-size: rem(16);
-  
+  transition: color .3s;
+}
+
+.p-top-news__content .p-news__title:hover.p-news__title{
+  text-decoration: underline;
+}
+
+.p-news-list__item .p-news__title:hover.p-news__title{
+  color: $title-color;
 }
