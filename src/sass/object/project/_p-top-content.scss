@@ -20,9 +20,14 @@
   }
 }
 
-.p-top-content__wrapper {}
+.p-top-content__wrapper {
+    margin-top: rem(48);
+  @include mq() {
+    margin-top: rem(40);
+  }
+}
 
-.p-top-content__list {
+.p-top-content__items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   @include mq() {
