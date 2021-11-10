@@ -1,0 +1,6 @@
+.l-sub-content {
+    margin-top: rem(85);
+    @include mq('tab') {
+        margin-top: rem(69);
+    }
+}
