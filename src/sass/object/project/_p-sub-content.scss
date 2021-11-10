@@ -1,0 +1,40 @@
+.p-sub-content__head {
+    margin: 0 auto;
+    @include mq('tab') {
+        max-width: rem(570);
+        width: 100%;
+    }
+}
+
+.p-sub-content__title {
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    text-align: center;
+    @include mq('tab') {
+        font-size: rem(25);
+        line-height: 1.4;  
+    }
+}
+
+.p-sub-content__text {
+    margin-top: rem(24);
+    font-size: rem(16);
+    letter-spacing: rem(2);
+    @include mq('tab') {
+        line-height: 2.1875;  
+    }
+}
+
+.p-sub-content__items {
+    margin-top: rem(80);
+    @include mq('tab') {
+        margin-top: rem(150);
+    }
+}
+
+.p-sub-content-list__item + .p-sub-content-list__item {
+    margin-top: rem(48);
+    @include mq('tab') {
+        margin-top: rem(104);
+    }
+}
