@@ -1,0 +1,33 @@
+.p-sub-blog__body {
+    @include mq('tab') {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.p-sub-blog__card {
+    @include mq('tab') {
+        max-width: calc(33.3333% - 2.5rem * 2 / 3);
+        width: 100%;
+    }
+}
+
+.p-sub-blog__card + .p-sub-blog__card {
+    margin-top: rem(25);
+    @include mq('tab') {
+        margin-top: 0;
+        margin-left: rem(25);
+    }
+}
+
+.p-sub-blog__card:nth-of-type(3n+1) {
+    @include mq('tab') {
+        margin-left: 0;
+    }
+}
+
+.p-sub-blog__card:nth-of-type(n+4) {
+    @include mq('tab') {
+        margin-top: rem(48);
+    }
+}
