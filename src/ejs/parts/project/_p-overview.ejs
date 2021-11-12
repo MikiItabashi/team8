@@ -12,13 +12,13 @@
 
 <div class="p-overview">
   <div class="p-overview__inner l-inner">
-
-    <% for (var overviewList of overviewLists) {%>
-      <dl class="p-overview__list">
+    <dl>
+      <% for (var overviewList of overviewLists) {%>
+      <div class="p-overview__list">
         <dt class="p-overview__title"><%= overviewList.title %></dt>
         <dd class="p-overview__text"><%= overviewList.text %></dd>
-      </dl>
-    <% } %>
-
+      </div>
+      <% } %>
+    </dl>
   </div>
 </div>
