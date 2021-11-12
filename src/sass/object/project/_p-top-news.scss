@@ -6,12 +6,14 @@
   @include mq() {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
 .p-top-news__content {
+  max-width: rem(860);
   @include mq() {
-    margin-right: rem(48);
+  margin-right: rem(48);
   }
 }
 
