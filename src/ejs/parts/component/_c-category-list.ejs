@@ -1,8 +1,12 @@
 <div class="c-category-list">
-  <% var ary = ['ALL', 'カテゴリ１', 'カテゴリカテゴリ', 'カテ']; %>
-  <ul class="c-category-list__items l-inner">
-    <% ary.forEach(function (value) { %>
-    <li class="c-category-list__item"><a href="" class="c-category-list__link"><%= value %></a></li>
-    <% }); %>
-  </ul>
+    <% var ary = ['ALL', 'カテゴリ１', 'カテゴリカテゴリ', 'カテ']; %>
+        <ul class="c-category-list__items l-inner">
+            <% ary.forEach(function (value) { %>
+                <li class="c-category-list__item">
+                    <a href="" class="c-category-list__link">
+                        <%= value %>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
 </div>
