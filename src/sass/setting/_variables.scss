@@ -21,7 +21,7 @@ $font-family-base: 'Noto Sans JP',
 sans-serif; // ベースフォント
 $font-family-second: 'Noto Serif JP',
 serif; // サブフォント
-$font-size-base: 16px; // ベースフォントサイズ
+$font-size-base: rem(16); // ベースフォントサイズ
 $font-weight-base: 400; // ベースフォントウェイト
 $lh: 1.875; // ベース行間
 // ---
