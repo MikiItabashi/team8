@@ -1,0 +1,45 @@
+.p-blog-related__title {
+    padding: rem(8) 0;
+    font-size: rem(16);
+    letter-spacing: rem(2);
+    border: rem(1) solid #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+.p-blog-related__body {
+    margin-top: rem(32);
+    @include mq('tab') {
+        margin-top: rem(80);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.p-blog-related__card {
+    margin: 0 auto;
+    @include mq('tab') {
+        max-width: calc(25% - 2rem * 3 / 4);
+        width: 100%;
+    }
+}
+
+.p-blog-related__card + .p-blog-related__card {
+    margin-top: rem(25);
+    @include mq('tab') {
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+}
+
+.p-blog-related__card:nth-of-type(4n+1) {
+    @include mq('tab') {
+        margin-left: 0;
+    }
+}
+
+.p-blog-related__card:nth-of-type(n+5) {
+    @include mq('tab') {
+        margin-top: rem(48);
+    }
+}
