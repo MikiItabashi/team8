@@ -1,0 +1,43 @@
+<% const worksSliderLists=[ 
+  { src:"images/works/works-img1.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img2.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img3.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img1.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img2.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img3.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img1.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img2.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img3.jpg" , alt:"制作実績" },
+  { src:"images/works/works-img1.jpg" , alt:"制作実績" },
+] %>
+
+
+  <div class="l-works-slider p-works-detail-slider">
+    <div class="p-works-detail-slider__inner l-inner-800w">
+      <div class="swiper-container p-works-detail-slider__container--main js-works-slider">
+        <div class="swiper-wrapper p-works-detail-slider__wrapper--main">
+          <% for (var worksSliderList of worksSliderLists) {%>
+            <figure class="swiper-slide p-works-detail-slider__img--main">
+              <img src="<%= worksSliderList.src %>" alt="<%= worksSliderList.alt %>">
+            </figure>
+            <% } %>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="swiper-container p-works-detail-slider__container--thumbnail js-works-thumbnail">
+        <div class="swiper-wrapper  p-works-detail-slider__wrapper--thumbnail">
+
+
+          <% for (var worksSliderList of worksSliderLists) {%>
+
+            <figure class="swiper-slide  p-works-detail-slider__img--thumbnail">
+              <img src="<%= worksSliderList.src %>" alt="<%= worksSliderList.alt %>">
+            </figure>
+            <% } %>
+        </div>
+      </div>
+    </div>
+
+  </div>

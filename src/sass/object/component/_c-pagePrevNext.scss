@@ -1,0 +1,16 @@
+.c-pagePrevNext__items {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.c-pagePrevNext__item a {
+  border: 1px solid $text-color;
+  padding: rem(2) rem(13);
+  text-transform: uppercase;
+  font-size: rem(16);
+}
+
+.c-pagePrevNext__item--archive {
+  margin: 0 rem(48);
+}

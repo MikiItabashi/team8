@@ -19,21 +19,24 @@
   }
 }
 
-.p-works__item {}
+.p-works__item {
+  position: relative;
+  width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  @include mq() {
+    width: 100%;
+    margin: initial;
+  }
+}
 
 .p-works__link {}
 
 .p-works__img {
   position: relative;
-  // width: 100%;
   padding-top: 69.6%;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
   @include mq() {
     padding-top: 69.8%;
-    width: 100%;
-    margin: initial;
   }
 }
 

@@ -1,0 +1,25 @@
+.p-works-detail-header__inner {
+}
+
+.p-works-detail-header__title {
+  font-size: rem(20);
+  @include mq() {
+    font-size: rem(23);
+    font-weight: 500;
+  }
+}
+
+.p-works-detail-header__info {
+  display: flex;
+  align-items: center;
+  margin-top: rem(16);
+  @include mq() {
+    margin-top: rem(32);
+  }
+}
+
+.p-works-detail-header__category {
+  margin-left: rem(30);
+  padding: rem(8) rem(20);
+  border: 1px solid $text-color;
+}

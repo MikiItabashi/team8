@@ -1,0 +1,47 @@
+<!-- データリスト -->
+<%
+const worksLists=[
+  { src:"images/works/works-img1.jpg" , alt:"制作実績",
+    title:"CodeUps株式会社", link:"works-detail.html" },
+  { src:"images/works/works-img2.jpg" , alt:"制作実績",
+    title:"CodeUps株式会社", link:"works-detail.html" },
+  { src:"images/works/works-img3.jpg" , alt:"制作実績",
+    title:"CodeUps株式会社", link:"works-detail.html" },
+  { src:"images/works/works-img1.jpg" , alt:"制作実績",
+    title:"CodeUps株式会社", link:"works-detail.html" },
+]
+%>
+
+<!-- 表示内容 -->
+<div class="p-works-detail-other">
+  <div class="p-works-detail-other__inner l-inner">
+    <h2 class="p-works-detail-other__header">関連記事</h2>
+    <div class="p-works-detail-other__wrapper">
+      <ul class="p-works-detail-other__list">
+        <% for (var worksList of worksLists) {%>
+        <li class="p-works-detail-other__item">
+          <a href="#" class="p-works-detail-other__link">
+            <div class="p-works-detail-other__img">
+              <img src="<%= worksList.src %>" alt="<%= worksList.alt %>">
+            </div>
+            <div class="p-works-detail-other__title"><%= worksList.title %></div>
+          </a>
+          <a class="p-works-detail-other__category" href="#">
+            <span>カテゴリ１</span>
+          </a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
