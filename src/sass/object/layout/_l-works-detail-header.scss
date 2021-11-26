@@ -1,0 +1,6 @@
+.l-works-detail-header {
+  margin-top: rem(53);
+  @include mq() {
+    margin-top: rem(90);
+  }
+}

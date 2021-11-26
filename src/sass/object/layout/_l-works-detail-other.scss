@@ -1,0 +1,6 @@
+.l-works-detail-other {
+  margin-top: rem(120);
+  @include mq() {
+    margin-top: rem(100);
+  }
+}

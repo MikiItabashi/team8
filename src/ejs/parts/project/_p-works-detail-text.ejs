@@ -1,0 +1,20 @@
+<% const worksTextLists=[ { title:"制作のポイント",
+  text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"
+  }, { title:"デザインのポイント", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" }, { title:"その他",
+  text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" }, ] %>
+
+  <!-- テキストコンテンツ -->
+  <section class="p-works-textarea">
+    <div class="p-works-textarea__inner l-inner-800w">
+      <% for (var worksTextList of worksTextLists) {%>
+        <h2 class="p-works-textarea__title">
+          <%= worksTextList.title %>
+        </h2>
+        <p class="p-works-textarea__text">
+          <%= worksTextList.text %>
+        </p>
+        <% } %>
+    </div>
+
+
+  </section>

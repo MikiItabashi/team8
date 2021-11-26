@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./common/_head') %>
+  <body>
+    <%- include('./common/_p-header') %>
+
+
+    <div class="l-breadcrumb-detail">
+      <%- include('./parts/component/_c-breadcrumb',{pagetitle:'制作実績', posttitle:'制作実績詳細'}) %>
+    </div>
+
+    <section class="l-works-detail-header">
+      <%- include('./parts/project/_p-works-detail-header') %>
+    </section>
+
+    <div class="l-works-detail-slider">
+      <%- include('./parts/project/_p-works-detail-slider') %>
+    </div>
+
+    <section class="l-works-detail-text">
+      <%- include('./parts/project/_p-works-detail-text') %>
+    </section>
+
+    <div class="l-pagePrevNext">
+      <%- include('./parts/component/_c-pagePrevNext') %>
+    </div>
+
+    <section class="l-works-detail-other">
+      <%- include('./parts/project/_p-works-detail-other') %>
+    </section>
+
+    <section class="l-contact">
+      <%- include('./parts/project/_p-contact') %>
+    </section>
+
+    <%- include('./common/_p-footer') %>
+
+  </body>
+</html>

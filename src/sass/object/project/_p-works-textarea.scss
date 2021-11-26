@@ -1,0 +1,27 @@
+.p-works-textarea__inner {
+}
+
+.p-works-textarea__title {
+  display: inline-block;
+  background-color: $background;
+  border: 1px solid $text-color;
+  padding: rem(8) rem(25);
+  border-radius: 32px;
+  margin-left: rem(24);
+  font-size: rem(20);
+  @include mq() {
+    margin-left: rem(38);
+    font-size: rem(20);
+  }
+}
+
+.p-works-textarea__text {
+  border: 1px solid $text-color;
+  padding: rem(56) rem(10) rem(32);
+  margin-top: rem(-25);
+  margin-bottom: rem(32);
+  @include mq() {
+    margin-bottom: rem(48);
+    padding: rem(44) rem(22) rem(32);
+  }
+}
