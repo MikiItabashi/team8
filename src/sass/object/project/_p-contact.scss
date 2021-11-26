@@ -1,36 +1,47 @@
 .p-contact {
-    padding-top: rem(19);
+    padding-top: rem(30);
     padding-bottom: rem(64);
     background: $gray;
     @include mq('tab') {
-        padding-top: rem(148);
+        padding-top: rem(128);
         padding-bottom: rem(149);
     }
 }
 
 .p-contact__head .c-title__en {
-    bottom: 0;
-    top: auto;
+    @include mq('tab') {
+        bottom: rem(-6);
+        top: auto;
+    }
 }
 
 .p-contact__body {
-    margin-top: rem(25);
+    margin-top: rem(16);
     @include mq('tab') {
         text-align: center;
+        margin-top: rem(23);
     }
 }
 
 .p-contact__text {
     letter-spacing: 0.125em;
+    line-height: 1.4;
 }
 
 .p-contact__btn {
-    margin-top: rem(40);
+    margin-top: rem(49);
     text-align: center;
     @include mq('tab') {
         margin-top: rem(61);
         max-width: rem(360);
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+.p-contact__btn .c-btn--black {
+    @include mq('tab') {
+        font-size: rem(20);
+        padding: rem(11) 0;
     }
 }

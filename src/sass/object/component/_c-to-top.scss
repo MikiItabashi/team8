@@ -10,9 +10,10 @@
     background-repeat: no-repeat;
     background-size: rem(24);
     transition: background-color .3s, background-image .3s;
+    z-index: 999;
     @include mq('tab') {
-        right: rem(32);
-        bottom: rem(27);
+        right: rem(34);
+        bottom: rem(33);
     }
 }
 

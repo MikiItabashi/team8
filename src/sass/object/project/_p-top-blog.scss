@@ -3,9 +3,9 @@
 .p-top-blog__head {}
 
 .p-top-blog__body {
-    margin-top: rem(64);
+    margin-top: rem(60);
     @include mq('tab') {
-        margin-top: rem(48);
+        margin-top: rem(38);
         display: flex;
         flex-wrap: wrap;
         margin-left: rem(-25);

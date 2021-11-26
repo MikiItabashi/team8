@@ -1,48 +1,55 @@
 .p-news {}
 
 .p-news__wrapper {
-  @include mq() {
-    display: flex;
-    align-items: center;
-  }
+    @include mq() {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .p-news__header {
-  display: flex;
-  align-items: center;
-  @include mq() {
-    margin-right: rem(60);
-  }
+    display: flex;
+    align-items: center;
+    @include mq() {
+        margin-right: rem(60);
+    }
 }
 
 .p-news__date {
-  margin-right: rem(48);
-  font-size: rem(16);
+    margin-right: rem(31);
+    font-size: rem(16);
+    @include mq('tab') {
+        margin-right: rem(48);
+    }
 }
 
 .p-news__category {
-  font-size: rem(14);
-  padding: rem(6) rem(22);
-  border: rem(1) solid $white;
+    font-size: rem(14);
+    padding: rem(2) rem(21);
+    border: rem(1) solid $white;
 }
 
 .p-news__titleblock {
-  flex: 1;
-  margin-top: rem(16);
-  @include mq() {
-    margin-top: initial;
-  }
+    display: inline-block;
+    flex: 1;
+    margin-top: rem(13);
+    @include mq() {
+        margin-top: rem(10);
+        margin-top: initial;
+    }
 }
 
 .p-news__title {
-  font-size: rem(16);
-  transition: color .3s;
+    font-size: rem(16);
+    transition: color .3s;
+    display: inline-block;
+    line-height: 1.5;
 }
 
-.p-top-news__content .p-news__title:hover.p-news__title{
-  text-decoration: underline;
+.p-top-news__content .p-news__title:hover.p-news__title {
+    text-decoration: underline;
 }
 
-.p-news-list__item .p-news__title:hover.p-news__title{
-  color: $title-color;
+.p-news-list__item .p-news__title:hover.p-news__title {
+    color: $title-color;
 }

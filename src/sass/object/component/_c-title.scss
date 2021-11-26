@@ -7,8 +7,10 @@
     font-size: rem(20);
     letter-spacing: 0.125em;
     font-weight: 400;
-    padding-top: 1em;
+    padding-top: rem(34);
     @include mq('tab') {
+        letter-spacing: 0.08em;
+        padding-top: rem(21);
         font-size: rem(30);
         line-height: (35 / 30);
     }
@@ -16,7 +18,7 @@
 
 .c-title__en {
     font-size: rem(50);
-    letter-spacing: 0.125em;
+    letter-spacing: 0.025em;
     line-height: 1;
     color: #F9F871;
     opacity: 0.27;
@@ -27,6 +29,7 @@
     left: 50%;
     transform: translateX(-50%);
     @include mq('tab') {
+        letter-spacing: 0.018em;
         font-size: rem(110);
         left: 0;
         transform: none;

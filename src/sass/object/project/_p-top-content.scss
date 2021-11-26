@@ -5,7 +5,7 @@
 .p-top-content::before {
   content: '';
   position: absolute;
-  top: -20%;
+  top: -17%;
   left: 45%;
   width: 1px;
   height: calc(776 / 375 * 100vw);
@@ -21,9 +21,9 @@
 }
 
 .p-top-content__wrapper {
-    margin-top: rem(48);
+    margin-top: rem(44);
   @include mq() {
-    margin-top: rem(40);
+    margin-top: rem(47);
   }
 }
 
@@ -63,7 +63,7 @@
 .p-top-content__img {
   position: relative;
   width: 100%;
-  padding-top: 88.88%;
+  padding-top: 89.7%;
   @include mq() {
     padding-top: 100%;
   }
@@ -89,6 +89,7 @@
 
 .p-top-content__text {
   font-size: rem(20);
+  letter-spacing: 0.025em;
   @include mq() {
     font-size: rem(25);
   }

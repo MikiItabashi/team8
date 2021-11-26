@@ -5,10 +5,10 @@
   font-size: rem(20);
   // font-weight: $regular;
   letter-spacing: rem(2);
-  padding: rem(9) 0;
+  padding: rem(5) 0;
   @include mq() {
     font-size: rem(16);
-    padding: rem(16) 0;
+    padding: rem(14) 0;
   }
 }
 
@@ -42,6 +42,7 @@
   color: $white;
   border: rem(1) solid $white;
   @include mq() {
+  letter-spacing: 0;
   background-color: $white;
   color: $gray;
   padding: 0;

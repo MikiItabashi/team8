@@ -4,17 +4,17 @@
 
 .p-top-works__wrapper {
     z-index: 1;
-    margin-top: rem(48);
+    margin-top: rem(43);
     position: relative;
     @include mq('tab') {
-        margin-top: rem(42);
+        margin-top: rem(41);
     }
 }
 
 .p-top-works__body {
     @include mq('tab') {
-        margin-top: rem(42);
-        padding-top: rem(80);
+        margin-top: rem(-3);
+        padding-top: rem(81);
         padding-bottom: rem(80);
         display: flex;
         justify-content: center;
@@ -40,17 +40,17 @@
     margin: 0 calc(50% - 50vw);
     @include mq('tab') {
         margin: 0;
-        width: 50%;
+        width: 50.5%;
     }
 }
 
 .p-top-works__content {
-    padding-top: rem(24);
+    padding-top: rem(18);
     padding-bottom: rem(21);
     @include mq('tab') {
         margin-left: rem(32);
-        width: calc(50% + #{rem(32)});
-        width: 50%;
+        width: calc(49.5% + #{rem(32)});
+        width: 49.5%;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -58,27 +58,29 @@
 
 .p-top-works__title {
     font-size: rem(20);
-    letter-spacing: 0.125em;
+    letter-spacing: 0.1em;
     text-align: center;
     @include mq('tab') {
         font-size: rem(25);
         letter-spacing: 0.5px;
         text-align: left;
+        margin-top: rem(-16);
     }
 }
 
 .p-top-works__text {
     letter-spacing: 0.125em;
-    margin-top: rem(24);
+    margin-top: rem(20);
+    line-height: 1.45;
     @include mq('tab') {
         letter-spacing: 0.5px;
+        margin-top: rem(33);
         line-height: (35 / 16);
-        margin-top: rem(48);
     }
 }
 
 .p-top-works__btn {
-    margin-top: rem(16);
+    margin-top: rem(27);
     text-align: center;
     @include mq('tab') {
         margin-top: rem(48);
@@ -95,7 +97,18 @@
 .p-top-works__slider .swiper-pagination-bullets.swiper-pagination-horizontal,
 .p-top-works__slider .swiper-pagination-custom,
 .p-top-works__slider .swiper-pagination-fraction {
-    bottom: rem(-30);
+    bottom: rem(-23);
+    @include mq('tab') {
+        bottom: rem(-33);
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+    @include mq('tab') {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+    }
 }
 
 .p-top-works__slider .swiper-pagination-bullet {

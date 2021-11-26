@@ -5,7 +5,7 @@
 .p-top-overview::before {
     content: '';
     position: absolute;
-    top: -66%;
+    top: -69%;
     left: 40%;
     width: 1px;
     height: calc(1448 / 375 * 100vw);
@@ -13,7 +13,7 @@
     transform: rotate(15deg);
     z-index: -1;
     @include mq() {
-        top: -78%;
+        top: -82%;
         left: 48%;
         height: calc(1712.34 / 1280 * 110vw);
         transform: rotate(45deg);
@@ -24,7 +24,7 @@
 
 .p-top-overview__wrapper {
     z-index: 1;
-    margin-top: rem(48);
+    margin-top: rem(44);
     position: relative;
     @include mq('tab') {
         margin-top: rem(42);
@@ -35,7 +35,7 @@
     @include mq('tab') {
         margin-top: rem(42);
         padding-top: rem(80);
-        padding-bottom: rem(80);
+        padding-bottom: rem(77);
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
@@ -61,12 +61,12 @@
     margin: 0 calc(50% - 50vw);
     @include mq('tab') {
         margin: 0;
-        width: 50%;
+        width: 55%;
     }
 }
 
 .p-top-overview__content {
-    padding-top: rem(24);
+    padding-top: rem(19);
     padding-bottom: rem(21);
     @include mq('tab') {
         margin-right: rem(32);
@@ -79,9 +79,10 @@
 
 .p-top-overview__title {
     font-size: rem(20);
-    letter-spacing: 0.125em;
+    letter-spacing: 0.1em;
     text-align: center;
     @include mq('tab') {
+        margin-top: rem(-23);
         font-size: rem(25);
         letter-spacing: 0.5px;
         text-align: left;
@@ -90,16 +91,17 @@
 
 .p-top-overview__text {
     letter-spacing: 0.125em;
-    margin-top: rem(24);
+    margin-top: rem(18);
+    line-height: 1.45;
     @include mq('tab') {
         letter-spacing: 0.5px;
         line-height: (35 / 16);
-        margin-top: rem(48);
+        margin-top: rem(32);
     }
 }
 
 .p-top-overview__btn {
-    margin-top: rem(16);
+    margin-top: rem(27);
     text-align: center;
     @include mq('tab') {
         margin-top: rem(48);
