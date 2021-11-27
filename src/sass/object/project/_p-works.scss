@@ -13,7 +13,7 @@
 }
 
 .p-works__list > li:nth-child(n+2) {
-  margin-top: rem(50);
+  margin-top: rem(46.5);
   @include mq() {
     margin-top: initial;
   }
@@ -36,7 +36,7 @@
   position: relative;
   padding-top: 69.6%;
   @include mq() {
-    padding-top: 69.8%;
+    padding-top: 66.5%;
   }
 }
 
@@ -54,16 +54,18 @@
   top: 0;
   right: 0;
   background-color: $background;
-  padding: rem(10) rem(20);
+  padding: rem(4.5) rem(20);
   min-width: rem(128);
+  letter-spacing: 0.1em;
 }
 
 
 
 .p-works__title {
-  margin-top: rem(24);
+  margin-top: rem(13);
   font-size: rem(20);
   line-height: 1.75;
+  letter-spacing: 0.1em;
   @include mq() {
     margin-top: rem(12);
   }
