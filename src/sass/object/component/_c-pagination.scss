@@ -34,10 +34,12 @@
 }
 
 .c-pagination__item--prev-next {
-  
-  padding: rem(3) rem(13);
+  padding: 0 rem(13);
+  line-height: 1.45;
+  letter-spacing: 0.1em;
 }
 
 .c-pagination__item--number {
-  padding: rem(3) rem(8);
+  padding: 0 rem(7);
+  line-height: 1.45;
 }
