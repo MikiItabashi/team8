@@ -1,10 +1,10 @@
 .l-contact-form {
-    margin-top: rem(85);
+    margin-top: rem(80);
     margin-bottom: rem(120);
     @include mq('tab') {
         max-width: rem(696);
-        margin-top: rem(115);
-        margin-bottom: rem(150);
+        margin-top: rem(107);
+        margin-bottom: rem(145);
         margin-right: auto;
         margin-left: auto;
     }
