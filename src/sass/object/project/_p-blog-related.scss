@@ -1,5 +1,5 @@
 .p-blog-related__title {
-    padding: rem(8) 0;
+    padding: rem(5) 0;
     font-size: rem(16);
     letter-spacing: rem(2);
     border: rem(1) solid #fff;
@@ -24,7 +24,7 @@
     }
 }
 
-.p-blog-related__card + .p-blog-related__card {
+.p-blog-related__card+.p-blog-related__card {
     margin-top: rem(25);
     @include mq('tab') {
         margin-top: 0;
