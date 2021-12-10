@@ -3,7 +3,7 @@
 .p-news__wrapper {
     @include mq() {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
 }
 
@@ -16,7 +16,7 @@
 }
 
 .p-news__date {
-    margin-right: rem(31);
+    margin-right: rem(29);
     font-size: rem(16);
     @include mq('tab') {
         margin-right: rem(48);
