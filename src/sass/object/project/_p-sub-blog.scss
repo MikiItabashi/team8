@@ -7,13 +7,13 @@
 
 .p-sub-blog__card {
     @include mq('tab') {
-        max-width: calc(33.3333% - 2.5rem * 2 / 3);
+        max-width: calc(33.3333% - #{rem(25)} * 2 / 3);
         width: 100%;
     }
 }
 
 .p-sub-blog__card + .p-sub-blog__card {
-    margin-top: rem(25);
+    margin-top: rem(24);
     @include mq('tab') {
         margin-top: 0;
         margin-left: rem(25);
