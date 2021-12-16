@@ -10,7 +10,7 @@
 }
 
 .c-pagination__list > li:nth-of-type(n+2) {
-  margin-left: rem(24);
+  margin-left: rem(22);
 }
 
 .c-pagination__numberlist {
@@ -18,7 +18,7 @@
 }
  
 .c-pagination__numberlist > li:nth-of-type(n+2) {
-  margin-left: rem(16);
+  margin-left: rem(15.5);
 }
 
 .c-pagination__item {
@@ -34,12 +34,12 @@
 }
 
 .c-pagination__item--prev-next {
-  padding: 0 rem(13);
+  padding: 0 rem(12);
   line-height: 1.45;
   letter-spacing: 0.1em;
 }
 
 .c-pagination__item--number {
-  padding: 0 rem(7);
+  padding: 0 rem(6.8);
   line-height: 1.45;
 }
