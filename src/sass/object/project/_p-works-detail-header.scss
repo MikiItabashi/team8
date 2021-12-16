@@ -6,20 +6,26 @@
   @include mq() {
     font-size: rem(23);
     font-weight: 500;
+    letter-spacing: 0.02em;
   }
 }
 
 .p-works-detail-header__info {
   display: flex;
   align-items: center;
-  margin-top: rem(16);
+  margin-top: rem(14);
   @include mq() {
-    margin-top: rem(32);
+    margin-top: rem(28);
   }
+}
+
+.p-works-detail-header__time {
+  letter-spacing: 0.03em;
 }
 
 .p-works-detail-header__category {
   margin-left: rem(30);
-  padding: rem(8) rem(20);
+  padding: rem(4) rem(18);
   border: 1px solid $text-color;
+  letter-spacing: 0.12em;
 }

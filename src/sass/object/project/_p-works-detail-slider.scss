@@ -81,8 +81,9 @@
 
 .p-works-detail-slider__img--thumbnail {
   position: relative;
+  max-width: rem(163);
   width: 100%;
-  padding-top: 47.84%;
+  padding-top: 43.47%;
   opacity: 0.5;
   @include mq() {
     padding-top: 11.625%;
