@@ -1,21 +1,26 @@
 .p-overview__list {
   display: flex;
-  padding: rem(20) 0;
+  padding: rem(16.15) 0;
   border-bottom: 1px solid $text-color;
   @include mq() {
-    padding: rem(30) 0;
+    padding: rem(27) 0;
   }
 }
 
 .p-overview__title {
   max-width: rem(110);
-  width: 100%; 
+  width: 100%;
+  font-size: rem(13);
   @include mq() {
     max-width: rem(150);
-    width: 100%; 
+    font-size: rem(16);
   }
 }
 
 .p-overview__text {
   flex: 1;
+  font-size: rem(13);
+  @include mq() {
+    font-size: rem(16);
+  }
 }
