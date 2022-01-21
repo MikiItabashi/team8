@@ -22,13 +22,13 @@
     padding: 0 rem(32);
     color: $gray;
     background-color: $white;
-    transition: ease 0.3s;
+    @include btn__hover--LtoR($gray, $white);
 }
 
-.p-pc-nav__item--white:hover {
+/*.p-pc-nav__item--white:hover {
     color: $white;
     background-color: $gray;
-}
+}*/
 
 .p-pc-nav__item a {
     position: relative;
