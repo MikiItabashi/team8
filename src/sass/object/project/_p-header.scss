@@ -15,9 +15,14 @@
     justify-content: space-between;
     align-items: center;
     height: inherit;
+    transition: ease 0.5s;
     @include mq('tab') {
         padding: 0 0 0 rem(32);
     }
+}
+
+.p-header__inner.is-open {
+    background-color: $black;
 }
 
 .p-header__logo {
