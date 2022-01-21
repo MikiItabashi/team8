@@ -83,13 +83,15 @@
   position: relative;
   max-width: rem(163);
   width: 100%;
-  padding-top: 43.47%;
   opacity: 0.5;
-  @include mq() {
-    padding-top: 11.625%;
-  }
+  cursor: pointer;
 }
 
+.p-works-detail-slider__img--thumbnail::before {
+  padding-top: 100%; //height / width
+  display: block;
+  content: "";  
+}
 
 .p-works-detail-slider__img--thumbnail.swiper-slide-thumb-active {
   opacity: 1;
