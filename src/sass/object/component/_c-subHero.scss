@@ -27,7 +27,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: rem(30);
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     color: $white;
     letter-spacing: 0.05em;
     @include mq('tab') {

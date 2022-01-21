@@ -64,6 +64,7 @@
 .p-works__title {
   margin-top: rem(13);
   font-size: rem(20);
+  font-weight: $font-weight-Medium;
   line-height: 1.75;
   letter-spacing: 0.1em;
   @include mq() {

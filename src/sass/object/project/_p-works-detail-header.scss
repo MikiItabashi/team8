@@ -5,7 +5,7 @@
   font-size: rem(20);
   @include mq() {
     font-size: rem(23);
-    font-weight: 500;
+    font-weight: $font-weight-base;
     letter-spacing: 0.02em;
   }
 }

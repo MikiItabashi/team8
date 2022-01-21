@@ -3,7 +3,6 @@
   display: inline-block;
   width: 100%;
   font-size: rem(20);
-  // font-weight: $regular;
   letter-spacing: rem(2);
   padding: rem(5) 0;
   @include mq() {
@@ -19,6 +18,7 @@
   color: $white;
   border: rem(1) solid $white;
   @include mq() {
+    font-weight: $font-weight-Medium;
     //ホバーエフェクト
     @include btn__hover--LtoR($white, $gray);
   }
