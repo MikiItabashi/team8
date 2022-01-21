@@ -25,11 +25,6 @@
     @include btn__hover--LtoR($gray, $white);
 }
 
-/*.p-pc-nav__item--white:hover {
-    color: $white;
-    background-color: $gray;
-}*/
-
 .p-pc-nav__item a {
     position: relative;
     display: flex;
