@@ -47,3 +47,9 @@
     top: -7px;
     transform: rotate(-45deg);
 }
+
+html.is-fixed,
+html.is-fixed body {
+  height: 100%;
+  overflow: hidden;
+}

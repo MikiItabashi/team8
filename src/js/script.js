@@ -54,14 +54,29 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if ($('.js-hamburger').hasClass('is-open')) {
       $('.js-drawer-nav').fadeOut();
       $(this).removeClass('is-open');
+      $(".p-header__inner").removeClass('is-open');
+      $("html").removeClass("is-fixed");
     } else {
       $('.js-drawer-nav').fadeIn();
       $(this).addClass('is-open');
+      $(".p-header__inner").addClass('is-open');
+      $("html").addClass("is-fixed");
     }
-
-    if (window.matchMedia( "(min-width: 768px)" ).matches) {
+  });
+  //ページ内リンクをクリックで閉じる
+  $('.js-drawer-nav a[href]').on('click', function(event) {
+    $('.js-hamburger').removeClass('is-open');
+    $('.js-drawer-nav').fadeOut();
+    $("html").removeClass("is-fixed");
+  });
+  //resizeイベント
+  window.addEventListener("resize", function () {
+    setTimeout(function () {
+      //ドロワメニュー閉じる
+      $('.js-hamburger').removeClass('is-open');
       $('.js-drawer-nav').fadeOut();
-    }
+      $("html").removeClass("is-fixed");
+    }, 0);
   });
 
 
