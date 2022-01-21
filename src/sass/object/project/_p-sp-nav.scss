@@ -27,22 +27,33 @@
     letter-spacing: 0.1em;
     transition: ease 0.3s;
 }
-  
+
+.p-sp-nav__item a:hover {
+    opacity: $opacity;
+    @include mq('tab') {
+        opacity: 1;
+    }
+}
+
 .p-sp-nav__text {
     position: relative;
 }
 
 .p-sp-nav__item a:hover .p-sp-nav__text:after {
-    width: 100%;
+    @include mq('tab') {
+        width: 100%;
+    }
 }
 
 .p-sp-nav__text:after {
-    content: '';
-    width: 0;
-    height: 1px;
-    position: absolute;
-    top: rem(35);
-    left: 0;
-    background-color: $navhover-color;
-    transition: ease 0.3s;
+    @include mq('tab') {
+        content: '';
+        width: 0;
+        height: 1px;
+        position: absolute;
+        top: rem(35);
+        left: 0;
+        background-color: $navhover-color;
+        transition: ease 0.3s;   
+    }
 }
