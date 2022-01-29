@@ -1,3 +1,7 @@
+.p-sub-content {
+    overflow-x: hidden;
+}
+
 .p-sub-content-item {
     display: block;
     @include mq('tab') {
@@ -12,13 +16,11 @@
 
 .p-sub-content-item__img {
     margin: 0 calc(50% - 50vw);
-    padding-top: 80.1%;
     width: 100vw;
     position: relative;
     @include mq('tab') {
         margin-right: rem(30);
         margin-left: initial;
-        padding-top: initial;
         max-width: rem(550);
         width: 100%;
     }
@@ -32,10 +34,11 @@
 }
 
 .p-sub-content-item__img::before {
+    padding-top: 69.786096%;
+    content: "";
+    display: block;
     @include mq('tab') {
         padding-top: 66.727273%;
-        content: "";
-        display: block;
     }
 }
 
