@@ -1,4 +1,18 @@
-.p-top-works {}
+.p-top-works {
+    @include mq(tab) {
+        overflow-x: hidden;
+    }
+}
+
+.p-top-works__inner {
+	@include mq(tab) {
+        margin: 0 auto;
+        max-width: $l-inner + strip-unit($padding-pc) * 2;
+        width: 100%;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
 
 .p-top-works__head {}
 
@@ -25,19 +39,21 @@
 .p-top-works__wrapper::before {
     content: "";
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     top: 0;
     right: 0;
     background: $gray;
     z-index: -1;
     @include mq('tab') {
-        width: 70%;
+        margin: 0 calc(50% - 50vw);
+        width: 70vw;
+        box-sizing: border-box;
     }
 }
 
 .p-top-works__slider {
-    margin: 0 calc(50% - 50vw);
+    /*margin: 0 calc(50% - 50vw);*/
     @include mq('tab') {
         margin: 0;
         width: 50.5%;
@@ -45,14 +61,18 @@
 }
 
 .p-top-works__content {
+    margin: auto;
     padding-top: rem(18);
+    padding-right: $padding-sp;
     padding-bottom: rem(21);
+    padding-left: $padding-sp;
+    max-width: rem(540);
+    width: 100%;
     @include mq('tab') {
         margin-left: rem(32);
         width: calc(49.5% + #{rem(32)});
         width: 49.5%;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0;
     }
 }
 
