@@ -70,14 +70,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $("html").removeClass("is-fixed");
   });
   //resizeイベント
-  window.addEventListener("resize", function () {
-    setTimeout(function () {
-      //ドロワメニュー閉じる
+  $(window).resize(function() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
       $('.js-hamburger').removeClass('is-open');
       $('.js-drawer-nav').fadeOut();
       $("html").removeClass("is-fixed");
-    }, 0);
+    }
   });
-
-
 });
