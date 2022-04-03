@@ -31,6 +31,6 @@
 
 
 <!-- お問い合わせセクション表示 -->
-
+<?php get_template_part('content-contact'); ?>
 
 <?php get_footer(); ?>
