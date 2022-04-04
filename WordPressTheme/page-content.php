@@ -13,7 +13,7 @@
         <?php
         $contentgroup = SCF::get('content__group');
         foreach ($contentgroup as $fields) {
-          $imgurl = wp_get_attachment_image_src($fields['content__image'] , 'full');
+          $imgurl = wp_get_attachment_image_src($fields['content__image'], 'full');
         ?>
 
           <li class="p-sub-content-list__item p-sub-content-item">
@@ -26,9 +26,6 @@
             </div>
           </li>
         <?php } ?>
-
-
-
 
       </ul>
     </div>
