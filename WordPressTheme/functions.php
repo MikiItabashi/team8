@@ -125,6 +125,21 @@ function my_archive_title( $title ) {
 };
 add_filter( 'get_the_archive_title', 'my_archive_title' );
 
+/**************************************************************
+* ブログアーカイブページの、各カード型情報のサムネイル画像を表示
+**************************************************************/
+function get_card_image($categoryName = null)
+{
+  global $post;
+  if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog') :
+    if (has_post_thumbnail($post->ID)) :
+      return get_the_post_thumbnail($post->ID, 'full');
+    //画像登録されていない場合、ノーイメージ画像を表示
+    else :
+      return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
+    endif;
+  endif;
+}
 
 /**
  * 抜粋文の文字数の変更
@@ -149,3 +164,5 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+
