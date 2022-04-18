@@ -17,6 +17,24 @@
     }
 }
 
+.p-form input[type="submit"],
+.p-form input[type="reset"],
+.p-form input[type="button"] {
+    @extend .c-btn;
+    border-color: transparent;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.p-form input[type="submit"]:hover,
+.p-form input[type="reset"]:hover,
+.p-form input[type="button"]:hover {
+    border-color: transparent;
+    background: transparent;
+    color: inherit;
+}
+
 .p-form textarea {
     height: rem(250);
     resize: vertical;
@@ -61,6 +79,11 @@
     }
 }
 
+.p-form__btn-wrapper {
+    color: inherit;
+    padding: 0;
+}
+
 .p-form__btn {
     text-align: center;
     margin-top: rem(40);
@@ -70,4 +93,12 @@
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.p-form__btn-wrapper.c-btn--white {
+    padding: 0;
+}
+
+.wpcf7-spinner {
+    display: none;
 }
