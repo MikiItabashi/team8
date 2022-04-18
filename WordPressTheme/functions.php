@@ -183,3 +183,22 @@ function redirect_thanks_page()
 		</script>
 <?php }
 }
+
+/**************************************************************
+* アーカイブページの、各カード型情報のサムネイル画像を表示
+**************************************************************/
+function get_card_image($categoryName = null)
+{
+  global $post;
+  if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog') :
+    if (has_post_thumbnail($post->ID)) :
+      return get_the_post_thumbnail($post->ID, 'full');
+    //画像登録されていない場合、ノーイメージ画像を表示
+    else :
+      return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
+    endif;
+
+  else :
+    return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
+  endif;
+}
