@@ -18,10 +18,8 @@
   word-wrap: break-word;
 }
 
-.c-category-list__item:nth-of-type(1) {
-  .c-category-list__link {
-    padding: rem(3) rem(8);
-    color: #333;
-    background-color: #fff;
-  }
+.c-category-list__link.current {
+  padding: rem(3) rem(8);
+  color: #333;
+  background-color: #fff;
 }
