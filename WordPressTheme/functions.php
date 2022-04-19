@@ -190,7 +190,7 @@ function redirect_thanks_page()
 function get_card_image($categoryName = null)
 {
   global $post;
-  if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog') :
+  if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog' || $categoryName == 'works') :
     if (has_post_thumbnail($post->ID)) :
       return get_the_post_thumbnail($post->ID, 'full');
     //画像登録されていない場合、ノーイメージ画像を表示
