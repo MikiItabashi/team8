@@ -18,7 +18,7 @@
                     <div class="p-news__category">お知らせ</div>
                 </div>
                 <div class="p-news__titleblock">
-                  <a href="#" class="p-news__title">
+                  <a href="<?php the_permalink(); ?>" class="p-news__title">
                     <h3><?php the_title() ?></h3>
                   </a>
                 </div>
