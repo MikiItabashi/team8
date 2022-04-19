@@ -64,23 +64,23 @@
 </div>
 <div class="l-pagePrevNext">
 <div class="c-pagePrevNext">
-    <ul class="c-pagePrevNext__items">
+  <ul class="c-pagePrevNext__items">
     <?php
     $prev_post = get_previous_post();
     if( !empty( $prev_post ) ):
       $prev_url = get_permalink( $prev_post->ID );
     ?>
-      <li class="c-pagePrevNext__item"><a href="<?php echo esc_url( $prev_url ); ?>">prev</a></li>
+    <li class="c-pagePrevNext__item"><a href="<?php echo esc_url( $prev_url ); ?>">prev</a></li>
     <?php endif; ?>
-      <li class="c-pagePrevNext__item c-pagePrevNext__item--archive"><a href="<?php echo esc_url( home_url('works') ); ?>">一覧</a></li>
+    <li class="c-pagePrevNext__item c-pagePrevNext__item--archive"><a href="<?php echo esc_url( home_url('works') ); ?>">一覧</a></li>
     <?php
     $next_post = get_next_post();
     if( !empty( $next_post ) ):
       $next_url = get_permalink( $next_post->ID );
     ?>
-      <li class="c-pagePrevNext__item"><a href="<?php echo esc_url( $next_url ); ?>">next</a></li>
+    <li class="c-pagePrevNext__item"><a href="<?php echo esc_url( $next_url ); ?>">next</a></li>
     <?php endif; ?>
-    </ul>
+  </ul>
 </div>
 </div>
 <section class="l-works-detail-other">
@@ -109,13 +109,13 @@
           while( $query->have_posts() ): $query->the_post();
         ?>
           <li class="p-works-detail-other__item">
-            <a href="#" class="p-works-detail-other__link">
+            <a href="<?php the_permalink(); ?>" class="p-works-detail-other__link">
               <div class="p-works-detail-other__img">
                 <?php echo get_card_image("works"); ?>
               </div>
             <div class="p-works-detail-other__title"><?php the_title(); ?></div>
             </a>
-            <a class="p-works-detail-other__category" href="#">
+            <a class="p-works-detail-other__category" href="<?php the_permalink(); ?>">
               <span><?php echo esc_html( $terms[0]->name ); ?></span>
             </a>
           </li>
