@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
-  
+
   <?php wp_head(); ?>
 </head>
 
@@ -53,3 +53,36 @@
       <li class="p-sp-nav__item"><a href="<?php echo esc_url(home_url('contact')) ?>"><span class="p-sp-nav__text">お問い合わせ</span></a></li>
     </ul>
   </nav>
+
+  <!-- 下層ページタイトル -->
+  <?php if (!is_front_page() && !is_single() && !is_404() && !is_page('contact/thanks')) : ?>
+    <?php
+    $id = get_post_thumbnail_id();
+    $img = wp_get_attachment_image_src($id, 'large');
+    ?>
+    <div class="c-subHero" style="background-image: url('<?php echo $img[0]; ?>')">
+      <h1>
+        <?php if (is_archive()) :
+          the_archive_title();
+        else :
+          the_title();
+        endif; ?>
+      </h1>
+    </div>
+  <?php endif; ?>
+
+  <!-- BreadcrumbNavXTのパンくずを表示 -->
+  <?php if (!is_front_page() && !is_404() && !is_page('contact/thanks')) : ?>
+    <div <?php if (is_single()) : ?> class="l-breadcrumb-detail" <?php else : ?> class="l-breadcrumb" <?php endif; ?>>
+      <div class="c-breadcrumb">
+        <div class="c-breadcrumb__items l-inner">
+          <?php
+          if (function_exists('bcn_display')) :
+            bcn_display();
+          endif;
+          ?>
+        </div>
+        </ul>
+      </div>
+    </div>
+  <?php endif; ?>
