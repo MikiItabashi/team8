@@ -1,13 +1,14 @@
-.c-breadcrumb {}
+.c-breadcrumb {
+    font-size: rem(16);
+    letter-spacing: rem(1);
+}
 
 .c-breadcrumb__items {
-  display: flex;
+    display: flex;
 }
 
 .c-breadcrumb__item {
-  display: flex;
-  font-size: rem(16);
-  letter-spacing: rem(1);
+    display: flex;
 }
 
 .c-breadcrumb__link {}
