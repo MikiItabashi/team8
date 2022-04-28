@@ -1,0 +1,40 @@
+
+.p-pagenavi {}
+
+// プラグイン『WP-PageNavi』の設定
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  display: inline-block;
+	color: $text-color;
+	background-color: transparent;
+	border: solid 1px $text-color;
+  width: rem(24);
+	margin: 0 rem(8);
+	transition: 0.3s;
+	text-align: center;
+	text-decoration:none;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+}
+
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .previouspostslink {
+  width: unset;
+  margin: 0 rem(16);
+  padding: 0 rem(13);
+}
+
+.wp-pagenavi a:hover{
+    color:$background; 
+    background-color:$text-color; 
+    border-color:$text-color;
+    }
+.wp-pagenavi span.current{
+	color: $background;
+	background-color: $text-color;
+	border-color: $text-color;
+    }
