@@ -202,3 +202,25 @@ function get_card_image($categoryName = null)
     return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
   endif;
 }
+
+/****************************************************************
+* 記事にNEWマークを条件指定で表示するための条件判断関数
+*****************************************************************/
+/**
+* 指定した日数以内の指定件数の最新記事にNEWマークを表示
+**/
+function newMark_condition_numTime($days, $limit, $current_post)
+{
+  $today = date_i18n('U');
+  $entry_day = get_the_time('U');
+  $difference_time = date('U', ($today - $entry_day)) / 86400;
+  if ($days > $difference_time) :
+    if ($limit > $current_post) :
+      return true;
+    else :
+      return false;
+    endif;
+  else :
+    return false;
+  endif;
+}
