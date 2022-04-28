@@ -59,10 +59,15 @@
     <?php
     $id = get_post_thumbnail_id();
     $img = wp_get_attachment_image_src($id, 'large');
+    // if(is_singular('works') || is_singlar('blog')){
+    //   ys_get_header_post_thumbnail();
+    // }
     ?>
     <div class="c-subHero" style="background-image: url('<?php echo $img[0]; ?>')">
       <h1>
-        <?php if (is_archive()) :
+        <?php if (is_home()) :
+          echo 'お知らせ';
+        elseif (is_archive()) :
           the_archive_title();
         else :
           the_title();

@@ -185,20 +185,97 @@ function redirect_thanks_page()
 }
 
 /**************************************************************
-* アーカイブページの、各カード型情報のサムネイル画像を表示
-**************************************************************/
+ * アーカイブページの、各カード型情報のサムネイル画像を表示
+ **************************************************************/
 function get_card_image($categoryName = null)
 {
-  global $post;
-  if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog' || $categoryName == 'works') :
-    if (has_post_thumbnail($post->ID)) :
-      return get_the_post_thumbnail($post->ID, 'full');
-    //画像登録されていない場合、ノーイメージ画像を表示
-    else :
-      return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
-    endif;
+	global $post;
+	if (is_post_type_archive('blog') || is_tax('custom_category') || $categoryName == 'blog' || $categoryName == 'works') :
+		if (has_post_thumbnail($post->ID)) :
+			return get_the_post_thumbnail($post->ID, 'full');
+		//画像登録されていない場合、ノーイメージ画像を表示
+		else :
+			return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
+		endif;
 
-  else :
-    return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
-  endif;
+	else :
+		return '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/common/noimg.png" alt="登録画像無し" />';
+	endif;
 }
+
+/**************************************************************
+ * パンくずリスト
+ **************************************************************/
+// 記事タイトルを非表示
+function foo_pop($trail)
+{
+	if (is_single()) {
+		array_shift($trail->trail);
+	}
+}
+add_action('bcn_after_fill', 'foo_pop');
+
+// 詳細ページ
+function bcn_add($bcnObj)
+{
+	// デフォルト投稿の詳細ページかどうか
+	if (is_singular('works')) {
+		// 制作実績
+		$bcnObj->add(new bcn_breadcrumb('制作実績詳細', null, array('archive', 'post-clumn-archive', 'current-item')));
+		$trail_tmp = clone $bcnObj->trail[1];
+		$bcnObj->trail[1] = clone $bcnObj->trail[0];
+		$bcnObj->trail[0] = clone $bcnObj->trail[2];
+		$bcnObj->trail[2] = $trail_tmp;
+	} elseif (is_singular('blog')) {
+		// ブログ
+		$bcnObj->add(new bcn_breadcrumb('ブログ記事詳細', null, array('archive', 'post-clumn-archive', 'current-item')));
+		$trail_tmp = clone $bcnObj->trail[1];
+		$bcnObj->trail[1] = clone $bcnObj->trail[0];
+		$bcnObj->trail[0] = clone $bcnObj->trail[2];
+		$bcnObj->trail[2] = $trail_tmp;
+	}
+	return $bcnObj;
+}
+add_action('bcn_after_fill', 'bcn_add');
+
+
+
+/**************************************************************
+ * 下層ページトップ画像の取得
+ **************************************************************/
+// add_filter(
+// 	'ys_get_header_post_thumbnail',
+// 	function ($thumbnail) {
+// 		// カスタム投稿タイプのアーカイブページの場合に画像(img)タグを返す.
+// 		if (is_post_type_archive('manual')) {
+// 			// return '<img src="[画像URL]" alt="[画像alt]" />';
+// 			return 'aaa';
+// 		}
+// 		// 変更しない場合はnullを返す.
+// 		return null;
+// 	}
+// );
+
+
+/* 投稿と固定ページ一覧にサムネイルの列を追加 */
+// function add_posts_columns_thumbnail($columns)
+// {
+// 	$columns['thumbnail'] = 'サムネイル';
+
+// 	echo '<style>
+// 	.fixed .column-thumbnail {width: 120px;}</style>';
+// 	return $columns;
+// }
+// add_filter('manage_posts_columns', 'add_posts_columns_thumbnail');
+// add_filter('manage_pages_columns', 'add_posts_columns_thumbnail');
+
+// /* サムネイルを表示 */
+// function custom_posts_columns_thumbnail($column_name, $post_id)
+// {
+// 	if ('thumbnail' == $column_name) {
+// 		$thumb = get_the_post_thumbnail($post_id, 'small', array('style' => 'width:100px;height:auto;'), 'thumbnail');
+// 		echo ($thumb) ? $thumb : '－';
+// 	}
+// }
+// add_action('manage_posts_custom_column', 'custom_posts_columns_thumbnail', 10, 2);
+// add_action('manage_pages_custom_column', 'custom_posts_columns_thumbnail', 10, 2);
