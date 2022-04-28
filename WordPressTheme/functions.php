@@ -279,3 +279,25 @@ add_action('bcn_after_fill', 'bcn_add');
 // }
 // add_action('manage_posts_custom_column', 'custom_posts_columns_thumbnail', 10, 2);
 // add_action('manage_pages_custom_column', 'custom_posts_columns_thumbnail', 10, 2);
+
+/****************************************************************
+* 記事にNEWマークを条件指定で表示するための条件判断関数
+*****************************************************************/
+/**
+* 指定した日数以内の指定件数の最新記事にNEWマークを表示
+**/
+function newMark_condition_numTime($days, $limit, $current_post)
+{
+  $today = date_i18n('U');
+  $entry_day = get_the_time('U');
+  $difference_time = date('U', ($today - $entry_day)) / 86400;
+  if ($days > $difference_time) :
+    if ($limit > $current_post) :
+      return true;
+    else :
+      return false;
+    endif;
+  else :
+    return false;
+  endif;
+}
