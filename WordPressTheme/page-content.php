@@ -16,7 +16,7 @@
           $imgurl = wp_get_attachment_image_src($fields['content__image'], 'full');
         ?>
 
-          <li class="p-sub-content-list__item p-sub-content-item">
+          <li class="p-sub-content-list__item p-sub-content-item" id="<?php echo esc_html($fields['content__title']); ?>">
             <div class="p-sub-content-item__img">
               <img src="<?php echo esc_url($imgurl[0]); ?>" alt="<?php echo esc_html($fields['content__title']); ?>">
             </div>
