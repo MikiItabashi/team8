@@ -243,18 +243,18 @@ add_action('bcn_after_fill', 'bcn_add');
 /**************************************************************
  * 下層ページトップ画像の取得
  **************************************************************/
-// add_filter(
-// 	'ys_get_header_post_thumbnail',
-// 	function ($thumbnail) {
-// 		// カスタム投稿タイプのアーカイブページの場合に画像(img)タグを返す.
-// 		if (is_post_type_archive('manual')) {
-// 			// return '<img src="[画像URL]" alt="[画像alt]" />';
-// 			return 'aaa';
-// 		}
-// 		// 変更しない場合はnullを返す.
-// 		return null;
-// 	}
-// );
+add_filter(
+	'ys_get_header_post_thumbnail',
+	function ($thumbnail) {
+		// カスタム投稿タイプのアーカイブページの場合に画像(img)タグを返す.
+		if (is_post_type_archive('works')) {
+			// return '<img src="[画像URL]" alt="[画像alt]" />';
+			return 'aaa';
+		}
+		// 変更しない場合はnullを返す.
+		return null;
+	}
+);
 
 
 /* 投稿と固定ページ一覧にサムネイルの列を追加 */

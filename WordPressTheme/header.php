@@ -59,9 +59,13 @@
     <?php
     $id = get_post_thumbnail_id();
     $img = wp_get_attachment_image_src($id, 'large');
-    // if(is_singular('works') || is_singlar('blog')){
-    //   ys_get_header_post_thumbnail();
-    // }
+    if (is_post_type_archive('works')) {
+      $img[0] = get_template_directory_uri() . '/assets/images/works/works-hero.jpg';
+    }elseif(is_post_type_archive('blog')){
+      $img[0] = get_template_directory_uri() . '/assets/images/blog/blog-hero.jpg';
+    }elseif(is_home()){
+      $img[0] = get_template_directory_uri() . '/assets/images/news/news-hero.jpg';
+    }
     ?>
     <div class="c-subHero" style="background-image: url('<?php echo $img[0]; ?>')">
       <h1>
