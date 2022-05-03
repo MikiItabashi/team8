@@ -21,8 +21,8 @@
       </div>
     </div>
     <div class="p-mv__titleblock">
-      <h1 class="p-mv__title">メインタイトルが入ります</h1>
-      <span class="p-mv__subtitle">サブタイトルが入ります</span>
+      <h1 class="p-mv__title">合同会社CodeUps</h1>
+      <span class="p-mv__subtitle">サンプルのコーポレートサイトです</span>
     </div>
   </div>
 </section>
@@ -78,46 +78,24 @@
       </div>
       <div class="p-top-content__wrapper">
         <ul class="p-top-content__items">
-          <li class="p-top-content__item">
-            <a href="#" class="p-top-content__link">
-              <div class="p-top-content__img">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/content1@2x.jpg" alt="事業内容コンテンツ『経営理念ページへ』リンク">
-              </div>
-              <div class="p-top-content__textblock">
-                <p class="p-top-content__text">経営理念ページへ</p>
-              </div>
-            </a>
-          </li>
-          <li class="p-top-content__item">
-            <a href="#" class="p-top-content__link">
-              <div class="p-top-content__img">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/content2@2x.jpg" alt="事業内容コンテンツ『理念1へ』リンク">
-              </div>
-              <div class="p-top-content__textblock">
-                <p class="p-top-content__text">理念1へ</p>
-              </div>
-            </a>
-          </li>
-          <li class="p-top-content__item">
-            <a href="#" class="p-top-content__link">
-              <div class="p-top-content__img">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/content3@2x.jpg" alt="事業内容コンテンツ『理念2へ』リンク">
-              </div>
-              <div class="p-top-content__textblock">
-                <p class="p-top-content__text">理念2へ</p>
-              </div>
-            </a>
-          </li>
-          <li class="p-top-content__item">
-            <a href="#" class="p-top-content__link">
-              <div class="p-top-content__img">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/content4@2x.jpg" alt="事業内容コンテンツ『理念3へ』リンク">
-              </div>
-              <div class="p-top-content__textblock">
-                <p class="p-top-content__text">理念3へ</p>
-              </div>
-            </a>
-          </li>
+
+          <?php
+          $top_contents = SCF::get('top-contents');
+          foreach ($top_contents as $fields) :
+            $top_contents = wp_get_attachment_image_src($fields['top-contents-img'], 'full');
+          ?>
+            <li class="p-top-content__item">
+              <a href="<?php echo esc_url(home_url($fields['top-contents-link'])) ?>" class="p-top-content__link">
+                <div class="p-top-content__img">
+                  <img src="<?php echo $top_contents[0]; ?>" alt="事業内容コンテンツリンク">
+                </div>
+                <div class="p-top-content__textblock">
+                  <p class="p-top-content__text"><?php echo $fields['top-contents-title']; ?></p>
+                </div>
+              </a>
+            </li>
+          <?php endforeach; ?>
+
         </ul>
       </div>
     </div>
