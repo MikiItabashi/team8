@@ -12,11 +12,13 @@
         <!-- 繰り返しフィールド読み込み -->
         <?php
         $contentgroup = SCF::get('content__group');
+        $contentcount = 0;
         foreach ($contentgroup as $fields) {
           $imgurl = wp_get_attachment_image_src($fields['content__image'], 'full');
+          $contentcount++;
         ?>
 
-          <li class="p-sub-content-list__item p-sub-content-item" id="<?php echo esc_html($fields['content__title']); ?>">
+          <li class="p-sub-content-list__item p-sub-content-item" id="content<?php echo $contentcount; ?>">
             <div class="p-sub-content-item__img">
               <img src="<?php echo esc_url($imgurl[0]); ?>" alt="<?php echo esc_html($fields['content__title']); ?>">
             </div>

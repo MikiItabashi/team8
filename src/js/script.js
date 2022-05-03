@@ -37,18 +37,19 @@ jQuery(function($) { // この中であればWordpressでも「$」が使用可�
         $('.menu').toggleClass('open');
     });
 
-    // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-    $(document).on('click', 'a[href*="#"]', function() {
-        let time = 300;
-        let header = $('header').innerHeight();
-        let target = $(this.hash);
-        if (!target.length) return;
-        let targetY = target.offset().top - header;
+    // スムーススクロール
+    var urlHash = location.hash;
+    if (urlHash) {
+        $('body,html').stop().scrollTop(0);
         setTimeout(function() {
-            $('html,body').animate({ scrollTop: targetY }, time);
-        }, 0);
-        return false;
-    });
+            // ヘッダー固定の場合はヘッダーの高さを数値で入れる、固定でない場合は0
+            var headerHight = $('header').innerHeight();
+            var target = $(urlHash);
+            var position = target.offset().top - headerHight;
+            $('body,html').stop().animate({ scrollTop: position }, 400);
+        }, 100);
+    };
+
 
     //ナビバートグル
     $('.js-hamburger').on('click', function() {

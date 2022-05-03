@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="p-mv__titleblock">
-      <h1 class="p-mv__title">合同会社CodeUps</h1>
+      <h1 class="p-mv__title">株式会社CodeUps</h1>
       <span class="p-mv__subtitle">サンプルのコーポレートサイトです</span>
     </div>
   </div>
@@ -81,11 +81,14 @@
 
           <?php
           $top_contents = SCF::get('top-contents');
+          $contentcount = 0;
           foreach ($top_contents as $fields) :
             $top_contents = wp_get_attachment_image_src($fields['top-contents-img'], 'full');
           ?>
             <li class="p-top-content__item">
-              <a href="<?php echo esc_url(home_url($fields['top-contents-link'])) ?>" class="p-top-content__link">
+              <a href="<?php echo esc_url(home_url('content')) ?><?php if (!$contentcount == 0) {
+                                                                    echo '#content' . $contentcount;
+                                                                  } ?>" class="p-top-content__link">
                 <div class="p-top-content__img">
                   <img src="<?php echo $top_contents[0]; ?>" alt="事業内容コンテンツリンク">
                 </div>
@@ -94,6 +97,7 @@
                 </div>
               </a>
             </li>
+            <?php $contentcount++; ?>
           <?php endforeach; ?>
 
         </ul>
