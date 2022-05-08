@@ -17,7 +17,7 @@
 }
 
 .p-blog-related__card {
-    margin: 0 auto;
+    // margin: 0 auto;
     @include mq('tab') {
         max-width: calc(25% - 2rem * 3 / 4);
         width: 100%;
