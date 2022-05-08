@@ -46,6 +46,7 @@
   </div>
 </div>
 
+<!-- ページネーション -->
 <?php
 if (function_exists('wp_pagenavi')) :
 ?>

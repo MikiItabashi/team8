@@ -66,6 +66,19 @@
     </div>
   </div>
 
+  <!-- ページネーション -->
+<?php
+if (function_exists('wp_pagenavi')) :
+?>
+  <div class="p-pagenavi l-pagenavi">
+      <?php
+      wp_pagenavi(array('query' => $the_query));
+      ?>
+  </div>
+<?php
+endif;
+?>
+
 <!-- お問い合わせセクション表示 -->
 <?php get_template_part( 'content-contact' ); ?>
 
