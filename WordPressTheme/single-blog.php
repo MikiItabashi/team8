@@ -25,9 +25,21 @@
 
       </div>
       <div class="p-blog-detail__link">
-        <p class="p-blog-detail__prev"><a href="#">prev</a></p>
+        <?php
+        $prev_post = get_previous_post();
+        if (!empty($prev_post)) :
+          $prev_url = get_permalink($prev_post->ID);
+        ?>
+          <p class="p-blog-detail__prev"><a href="<?php echo esc_url( $prev_url ); ?>">prev</a></p>
+        <?php endif; ?>
         <p class="p-blog-detail__list"><a href="<?php echo esc_url(home_url('blog')) ?>">一覧</a></p>
-        <p class="p-blog-detail__next"><a href="#">next</a></p>
+        <?php
+        $next_post = get_next_post();
+        if (!empty($next_post)) :
+          $next_url = get_permalink($next_post->ID);
+        ?>
+          <p class="p-blog-detail__next"><a href="<?php echo esc_url( $next_url ); ?>">next</a></p>
+        <?php endif; ?>
       </div>
 
       <?php
