@@ -13,7 +13,7 @@ $terms = get_the_terms($post->ID, 'custom_category'); //ターム一覧抽出
       <p class="p-blog-card__text"><?php echo get_the_excerpt(); ?></p>
       <div class="p-blog-card__info">
         <p class="p-blog-card__category"><?php echo esc_html($terms[0]->name); ?></p>
-        <time class="p-blog-card__date" datetime="<?php the_time('Y-m-d') ?>">"<?php the_time('Y.m.d') ?></time>
+        <time class="p-blog-card__date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time>
       </div>
     </div>
   </a>
