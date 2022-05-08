@@ -32,7 +32,7 @@
             $args = array(
             'post_type' => 'works',
             'post_status' => 'publish',
-            'posts_per_page' => 9,
+            'posts_per_page' => 6,
             'paged' => $paged,
             );
             $the_query = new WP_Query( $args );
