@@ -47,24 +47,6 @@
       </div>
     </div>
   </div>
-  <div class="l-pagination">
-    <div class="c-pagination">
-      <div class="c-pagination__inner l-inner">
-        <ul class="c-pagination__list">
-          <li class="c-pagination__item c-pagination__item--prev-next">PREV</li>
-          <li class="">
-            <ul class="c-pagination__numberlist">
-              <li class="c-pagination__item c-pagination__item--number current">1</li>
-              <li class="c-pagination__item c-pagination__item--number">2</li>
-              <li class="c-pagination__item c-pagination__item--number">3</li>
-              <li class="c-pagination__item c-pagination__item--number">4</li>
-            </ul>
-          </li>
-          <li class="c-pagination__item c-pagination__item--prev-next">NEXT</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <!-- ページネーション -->
 <?php
