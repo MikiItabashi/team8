@@ -59,11 +59,11 @@
     <?php
     $id = get_post_thumbnail_id();
     $img = wp_get_attachment_image_src($id, 'large');
-    if (is_post_type_archive('works')) {
+    if (is_post_type_archive('works') || is_tax('custom_category_works')) {
       $img[0] = get_template_directory_uri() . '/assets/images/works/works-hero.jpg';
-    }elseif(is_post_type_archive('blog')){
+    } elseif (is_post_type_archive('blog') || is_tax('custom_category')) {
       $img[0] = get_template_directory_uri() . '/assets/images/blog/blog-hero.jpg';
-    }elseif(is_home()){
+    } elseif (is_home()) {
       $img[0] = get_template_directory_uri() . '/assets/images/news/news-hero.jpg';
     }
     ?>
@@ -71,8 +71,10 @@
       <h1>
         <?php if (is_home()) :
           echo 'お知らせ';
-        elseif (is_archive()) :
-          the_archive_title();
+        elseif (is_post_type_archive('works') || is_tax('custom_category_works')) :
+          echo '制作実績';
+        elseif (is_post_type_archive('blog') || is_tax('custom_category')) :
+          echo 'ブログ';
         else :
           the_title();
         endif; ?>
